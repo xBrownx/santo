@@ -1,4 +1,4 @@
-import { css } from "styled-components";
+
 
 // blue #4160AE;
 // primary #9F472B;
@@ -13,7 +13,6 @@ Colour.theme = {
     secondary: '#4160AE',
     neutralLight: '#F6FAF9',
     neutralDark: '#0C0C20',
-
 }
 
 Colour.font = {
