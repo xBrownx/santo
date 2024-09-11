@@ -1,4 +1,4 @@
-export const location = {
+export const locationConst = {
     titleTxt: "LOCATION",
     subtitleTxt: "8-18 Santo Parade, Port Adelaide SA 5015",
     buttonTxt: "VIEW ON GOOGLE MAPS",
