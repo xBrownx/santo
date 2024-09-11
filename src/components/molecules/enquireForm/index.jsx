@@ -1,9 +1,9 @@
 import { useState, memo } from "react";
 import { Button, Column, Container, Input, TextArea, Row } from "../../atoms";
+import { enquireConst as CONST } from './constants';
 
-
-function EnquireForm(props) {
-    const { fields } = props;
+function EnquireForm() {
+    const fields = CONST.fields;
     const [inputs, setInputs] = useState({});
 
     const handleChange = (event) => {
