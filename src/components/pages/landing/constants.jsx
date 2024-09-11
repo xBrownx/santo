@@ -1,3 +1,3 @@
-export const landing = {
+export const landingConst = {
 
 }
