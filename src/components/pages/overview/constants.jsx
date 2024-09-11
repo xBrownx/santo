@@ -1,4 +1,4 @@
-export const overview = {
+export const overviewConst = {
     titleTxt: 'OVERVIEW',
     paragraphTxt: 'RWC Adelaide & McGees Property are excited to present 1837 Business Park, a brand new office warehouse development in the absolute heart of the gentrifying Port Adelaide. Spoilt with immediate amenity nearby the recently developed 650* home master planned community - Dock One by Kite Projects.',
     subtitleTxt: "KEY HIGHLIGHTS",
