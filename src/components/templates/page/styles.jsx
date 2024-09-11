@@ -1,15 +1,11 @@
 import styled, {css} from 'styled-components'
-import {
-    Style as S,
-} from '../../util'
+import { Style as S } from '../../util'
 
 export const StyledPage = styled.section`
-    ${S.flex.column};
-    
     position: relative;
-    //min-width: 100%;
-    //height: 100%;
-    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 100vw;
     max-width: 100vw !important;
     overflow: hidden;
 
