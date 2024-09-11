@@ -2,6 +2,7 @@
 import { css } from 'styled-components';
 import * as Calc from "./Calcs";
 import { Colour as C } from "./Colour";
+import * as Calcs from "./Calcs.jsx";
 
 export const Style = {}
 
@@ -76,3 +77,17 @@ Style.square = Calc.square;
 Style.squareTwo = Calc.squareTwo;
 
 Style.position = Calc.position;
+
+Style.font = {
+    size: Calcs.fontSize,
+    primary: css``,
+    secondary: css``,
+    lineHeight: Calcs.lineHeight,
+}
+
+Style.colour = {
+    primary: '#9F472B',
+    secondary: '#4160AE',
+    neutralLight: '#F6FAF9',
+    neutralDark: '#0C0C20',
+}

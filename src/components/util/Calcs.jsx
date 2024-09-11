@@ -105,6 +105,7 @@ export const gapX = (px) => css`gap:${pxToViewWidth(px)}vw;`;
 export const gapY = (px) => css`gap:${pxToViewHeight(px)}vh;`;
 
 export const fontSize = (px) => css`font-size: ${pxToFontSize(px)}vw;`;
+export const lineHeight = (px) => css`line-height: ${pxToViewHeight(px)}vh;`;
 
 export const position = ({top='unset', right='unset', bottom='unset', left='unset'}) => {
     return css`
