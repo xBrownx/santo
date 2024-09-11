@@ -4,7 +4,7 @@ import { Page } from "../../templates/index.jsx";
 import img from "../../../assets/Landing-Placeholder.png"
 
 
-const Landing = memo(
+
     function Landing() {
         return (
             <Page $bgPrimary $fullScreen>
@@ -12,6 +12,6 @@ const Landing = memo(
             </Page>
         );
     }
-);
 
-export default Landing;
+
+export default memo(Landing);

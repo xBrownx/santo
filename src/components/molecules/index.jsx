@@ -1,4 +1,5 @@
-import { ButtonArray } from './buttonArray'
-import { PageHeading } from './PageHeading';
+import EnquireForm from "./enquireForm";
+import PageHeading from './PageHeading';
+import ScrollingCarousel from "./scrollingCarousel";
 
-export { ButtonArray, PageHeading };
+export { EnquireForm, PageHeading, ScrollingCarousel };

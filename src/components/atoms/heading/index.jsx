@@ -1,10 +1,12 @@
 import { StyledHeading } from "./styles";
 import { memo } from "react";
 
-export const Heading = memo(function Heading(props) {
+function Heading(props) {
     return (
         <StyledHeading {...props}>
             {props.children}
         </StyledHeading>
     );
-});
+}
+
+export default memo(Heading);

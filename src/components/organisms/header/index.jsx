@@ -6,23 +6,21 @@ import { StyledHeading } from "../../atoms/heading/styles.jsx";
 const titleText = CONST.titleText;
 const links = CONST.linkText;
 
-export const Header = memo(
-    function Header(props) {
-        return (
-            <Container height={80} {...props}>
-                <StyledHeading
-                    $primary
-                    size={32}
-                    weight={700}
+function Header(props) {
+    return (
+        <Container height={80} {...props}>
+            <StyledHeading
+                $primary
+                size={32}
+                weight={700}
 
-                >
-                    {titleText}
-                </StyledHeading>
-                <Links />
-            </Container>
-        );
-    }
-);
+            >
+                {titleText}
+            </StyledHeading>
+            <Links />
+        </Container>
+    );
+}
 
 const Links = memo(
     function Links() {
@@ -40,3 +38,5 @@ const Links = memo(
         );
     }
 );
+
+export default memo(Header);

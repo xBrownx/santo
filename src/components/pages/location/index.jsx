@@ -1,17 +1,10 @@
-import { forwardRef, memo } from 'react';
+import { memo } from 'react';
 import { Page } from '../../templates';
-
-import { PageHeading } from "../../molecules/index.jsx";
-import { Row } from "../../molecules/row/index.jsx";
-import { Container } from "../../molecules/container/index.jsx";
-import { Column } from "../../molecules/column/index.jsx";
-import { Paragraph } from "../../atoms/paragraph/index.jsx";
-import { Button } from "../../atoms/button/index.jsx";
 import img from "../../../assets/Location-Hero.png"
+import { Button, Column, Container, Paragraph, Row } from "../../atoms/index.jsx";
+import { PageHeading } from "../../molecules/index.jsx";
 
-const location = memo(
-    forwardRef(
-        function () {
+function Location() {
             return (
                 <Page $bgSecondary>
                     <Row paddingInlineBlock={{ inline: 32 }}>
@@ -42,7 +35,5 @@ const location = memo(
                 </Page>
             );
         }
-    )
-);
 
-export default location;
+export default memo(Location);

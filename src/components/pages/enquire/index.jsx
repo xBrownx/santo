@@ -1,17 +1,14 @@
-import { forwardRef, memo } from 'react';
+import { memo } from 'react';
 import { Page } from '../../templates';
 
 
-const Enquire = memo(
-    forwardRef(
-        function () {
-            return (
-                <Page>
+function Enquire() {
+    return (
+        <Page>
 
-                </Page>
-            );
-        }
-    )
-);
+        </Page>
+    );
+}
 
-export default Enquire;
+
+export default memo(Enquire);

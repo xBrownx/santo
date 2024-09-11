@@ -1,9 +1,8 @@
 import { forwardRef, memo } from 'react';
 import { agency as CONST } from '../../../constants'
 import { Page } from '../../templates';
-import { Column } from "../../molecules/column/index.jsx";
-import { PageHeading } from "../../molecules/index.jsx";
-import { Paragraph } from "../../atoms/paragraph/index.jsx";
+import { PageHeading } from "../../molecules";
+import { Column, Paragraph } from "../../atoms";
 
 
 const Agency = memo(
