@@ -1,5 +1,7 @@
-import EnquireForm from "./enquireForm";
-import PageHeading from './PageHeading';
-import ScrollingCarousel from "./scrollingCarousel";
+import Agent from './agent';
+import EnquireForm from './enquireForm';
+import LinkSubtitle from './linkSubtitle';
+import PageTitle from './PageTitle';
+import ScrollingCarousel from './scrollingCarousel';
 
-export { EnquireForm, PageHeading, ScrollingCarousel };
+export { Agent, EnquireForm, LinkSubtitle, PageTitle, ScrollingCarousel };
