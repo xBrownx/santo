@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { Calcs as CALCS } from './calcs';
+import { * as CALCS } from './calcs';
 
 const Style = {}
 
