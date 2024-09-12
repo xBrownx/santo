@@ -3,6 +3,7 @@ export const agencyConst = {
     paragraphTxt: "If you'd like to inspect this property in person, please contact an agent from McGees or RWC for further information or to arrange a private inspection.",
     agencies: [
         {
+            id: "mcgees",
             agencyName: "MCGEES PROPERTY",
             agents: [
                 {
@@ -16,6 +17,7 @@ export const agencyConst = {
             ]
         },
         {
+            id: "rwc",
             agencyName: "RWC ADELAIDE",
             agents: [
                 {
