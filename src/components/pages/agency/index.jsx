@@ -2,6 +2,7 @@ import { memo } from 'react';
 import { agency as CONST } from './constants'
 import { Column, Paragraph, SplitScreen, Subheading } from "../../atoms";
 import { PageTitle } from "../../molecules";
+import { AgencyAgents } from '../../organisms';
 import { Page } from '../../templates';
 
 
@@ -24,8 +25,7 @@ function Agency() {
                    </Paragraph>
                </Column>
                <Column>
-                   <Subheading>
-                   </Subheading>
+                   <AgencyAgents />
                </Column>
            </SplitScreen>
         </Page>
