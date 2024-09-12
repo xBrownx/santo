@@ -1,10 +1,8 @@
 import { memo } from 'react'
-
-import { Heading } from '../../atoms';
 import { Container } from './styles';
+import { Heading } from '../../atoms';
 
-
-function PageHeading(props) {
+function PageTitle(props) {
     return (
         <Container>
             <Heading
@@ -19,4 +17,4 @@ function PageHeading(props) {
 }
 
 
-export default memo(PageHeading);
+export default memo(PageTitle);
