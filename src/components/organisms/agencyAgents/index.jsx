@@ -14,8 +14,10 @@ function AgencyAgents(props) {
                 {agents.map(agent => {
                     return (
                         <Agent 
-                            key={agent.id} 
-                            agent={agent}
+                            key={agent.id}
+                            name={agent.name}
+                            phone={agent.phone}
+                            photo={agent.photo}
                         />
                     );
                 })}
