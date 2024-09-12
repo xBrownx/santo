@@ -1,15 +1,16 @@
 
 export const warehouseConst = {
-  modals: {
-      1: {
-          label: "",
-          groundFloor: "",
-          firstFloor: "",
-          secondFloor: "",
-          total: "",
-          link: "",
-          xPos: "",
-          yPos: ""
+    modals: [
+        {
+            warehouse: 1,
+            label: "",
+            groundFloor: "198",
+            firstFloor: "43",
+            secondFloor: "43",
+            total: "284",
+            link: "",
+            xPos: "",
+            yPos: ""
         },
-    }
+    ]
 }
