@@ -1,4 +1,5 @@
 import './App.css'
+import { useRef } from 'react';
 
 import Header from "../organisms/header";
 import Landing from "../pages/landing";
@@ -12,17 +13,24 @@ import ScrollingText from "../organisms/scrollingText/index.jsx";
 
 
 function App() {
-
+    const pageRefs = {
+        landing: useRef(),
+        overview: useRef(),
+        location: useRef(),
+        availability: useRef(),
+        agency: useRef(),
+        enquire: useRef(),
+    }
     return (
         <>
-            <Header />
-            <Landing />
-            <Overview />
-            <Location />
-            <Availability />
+            <Header pageRefs={pageRefs} />
+            <Landing pageRef={pageRefs.landing} />
+            <Overview pageRef={pageRefs.overview}/>
+            <Location pageRef={pageRefs.location}/>
+            <Availability pageRef={pageRefs.availability}/>
             <ScrollingText />
-            <Agency />
-            <Enquire />
+            <Agency pageRef={pageRefs.agency}/>
+            <Enquire pageRef={pageRefs.enquire}/>
             <Footer />
         </>
     )
