@@ -8,6 +8,7 @@ import { Page } from '../../templates';
 function Enquire() {
     return (
         <Page 
+            $bgPrimary
             paddingInline={32}
             paddingTop={188}
         >
