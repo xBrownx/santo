@@ -23,14 +23,14 @@ function App() {
     }
     return (
         <>
-            <Header pageRefs={pageRefs} />
-            <Landing pageRef={pageRefs.landing} />
-            <Overview pageRef={pageRefs.overview}/>
-            <Location pageRef={pageRefs.location}/>
-            <Availability pageRef={pageRefs.availability}/>
+            <Header $pageRefs={pageRefs} />
+            <Landing $pageRef={pageRefs.landing} />
+            <Overview $pageRef={pageRefs.overview}/>
+            <Location $pageRef={pageRefs.location}/>
+            <Availability $pageRef={pageRefs.availability}/>
             <ScrollingText />
-            <Agency pageRef={pageRefs.agency}/>
-            <Enquire pageRef={pageRefs.enquire}/>
+            <Agency $pageRef={pageRefs.agency}/>
+            <Enquire $pageRef={pageRefs.enquire}/>
             <Footer />
         </>
     )

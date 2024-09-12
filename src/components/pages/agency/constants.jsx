@@ -12,7 +12,7 @@ export const agencyConst = {
                     number: "+61 450 965 633"
                 },
                 {
-                    id: "marOno,
+                    id: "marOno",
                     name: "MARCO ONORATO",
                     number: "+61 481 157 645"
                 }
@@ -34,5 +34,5 @@ export const agencyConst = {
                 }
             ]
         },
-        
+    ]
 }

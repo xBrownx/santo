@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { Container, Heading } from "./styles";
-import { ScrollingCarousel } from "../../molecules/scrollingCarousel";
+import { ScrollingCarousel } from "../../molecules/";
 import { HeadingSplit } from "./headingSplit";
 
 

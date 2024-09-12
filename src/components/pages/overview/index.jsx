@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import styled from "styled-components";
 import { overviewConst as CONST } from "./constants.jsx";
-import { Button, Column, Container, Paragraph, SplitScreen} from "../../atoms";
+import { Column, Container, Paragraph, SplitScreen} from "../../atoms";
 import { PageTitle } from "../../molecules";
 import { Page } from '../../templates';
 
@@ -9,12 +9,12 @@ function Overview() {
     return (
         <Page 
             $bgPrimary
-            paddingInlineBlock={{block: 64}}
+            $paddingBlock={{block: 64}}
         >
             <Column>
                 <SplitScreen>
                     <Column>
-                        <PageTitle>
+                        <PageTitle $primary>
                             {CONST.titleTxt}
                         </PageTitle>
                         <Paragraph>
@@ -22,15 +22,12 @@ function Overview() {
                         </Paragraph>
                     </Column>
                     <Column>
-                        <Subtitle>
-                            {CONST.subtitleTxt}
-                        </Subtitle>
-                        <Details>
-                        </Details>
+
+
                     </Column>
                 </SplitScreen>
                 <Container>
-                    <SwipeCarousel />
+
                 </Container>
             </Column>
         </Page>

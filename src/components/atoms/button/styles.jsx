@@ -1,43 +1,39 @@
 import styled, {css} from "styled-components";
-import {
-    Style as S,
-
-} from "../../util";
+import { Style as S } from "../../util";
 
 
 export const StyledButton = styled.button`
-    transition: color 300ms;
-    ${S.font.size(18)};
-    ${S.borderRadius};
-    ${S.margin.none};
-    ${S.flex.centre};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: ${S.fontSize(18)};
     color: ${S.colour.secondary};
+    margin: 0;
+    padding: 0.5em 1.5em;
+    
+    
     background: transparent;
+    border-color: ${S.colour.secondary};
     border-width: 1px;
     border-style: solid;
-    border-color: ${S.colour.secondary};
-    padding: 0.5em 1.5em;
+    transition: color 300ms;
     overflow: hidden;
     position: relative;
     width: fit-content;
     z-index: 1;
-
-    ${props => props.width && css`
-        ${S.size.width(props.width)};
-        ${S.margin.none};
-        ${S.padding.none};
+    
+    ${props => props.$width && css`
+        width: ${S.width(props.width)};
+        padding: 0;
     `};
 
-    ${props => props.height && css`
-        ${S.size.height(props.height)};
+    ${props => props.$height && css`
+        height: ${S.height(props.height)};
     `};
 
-    ${props => props.fontSize && css`
-        ${S.font.size(props.fontSize)};
-    `};
-
-    ${props => props.square && css`
-        ${S.square(props.square)};
+    ${props => props.$fontSize && css`
+        font-size: ${S.fontSize(props.fontSize)};
     `};
     
     ${props => props.$secondary && css`
@@ -45,15 +41,8 @@ export const StyledButton = styled.button`
         border-color: white;
     `};
     
-    ${props => props.$variantOne && css`
-        color: black;
-        border-color: white;
-        background-color: white;
-        transition: all 200ms ease-in-out;
-    `};
-
-    ${props => props.gap && css`
-        ${S.gap.width(props.gap)};
+    ${props => props.$gap && css`
+        gap: ${S.width(props.gap)};
     `};
     
     ${props => props.$fillParent && css`
@@ -64,9 +53,7 @@ export const StyledButton = styled.button`
         width: 150px;
         height: 150px;
     `};
-
-   
-
+    
     &:hover {
         cursor: pointer;
         color: #FFF;
@@ -107,7 +94,6 @@ export const StyledButton = styled.button`
         padding: 0;
         margin: 0;
         width: 100%;
-        ${S.size.height(51)};
         color: ${S.colour.secondary};
         
         background: white;

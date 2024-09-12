@@ -2,14 +2,12 @@ import styled, { css } from 'styled-components';
 import { Style as S } from '../../util'
 
 export const StyledButton = styled.button`
-    ${S.size.square(48)};
-    ${S.borderRadius};
-    color: #2E4683;
+    color: ${S.colour.secondaryDark};
     background-color: white;
-    border: 1px solid #2E4683;
-    ${S.font.size(16)};
+    border: 1px solid ${S.colour.secondaryDark};;
+    font-size: ${S.fontSize(16)};
     align-items: center;
-    ${S.font.lineHeight(50)};
+    line-height: ${S.height(50)};
     text-align: center;
     
     ${props => props.$inActive && css`

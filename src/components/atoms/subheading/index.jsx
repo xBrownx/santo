@@ -3,9 +3,9 @@ import { StyledSubheading } from './styles'
 
 function Subheading(props) {
     return (
-        <div {...props}>
+        <StyledSubheading {...props}>
           {props.children}
-        </div>
+        </StyledSubheading>
     );
 }
 

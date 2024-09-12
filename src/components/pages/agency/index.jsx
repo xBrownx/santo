@@ -1,20 +1,17 @@
 import { memo } from 'react';
 import { agencyConst as CONST } from './constants'
-import { Column, Paragraph, SplitScreen, Subheading } from "../../atoms";
+import { Column, Paragraph, SplitScreen } from "../../atoms";
 import { PageTitle } from "../../molecules";
 import { AgencyAgents } from '../../organisms';
 import { Page } from '../../templates';
-
-
-
 
 function Agency() {
     const agencies = CONST.agencies;
     return (
         <Page 
             $bgPrimary
-            paddingTop={128}
-            paddingInline={32}
+            $paddingTop={128}
+            $paddingInline={32}
         >
             <SplitScreen>
                 <Column>
@@ -26,18 +23,19 @@ function Agency() {
                     </Paragraph>
                 </Column>
                 <Column>
-                    {agencies.map(agency, () => {
+                    {agencies.map(agency => {
                         return(
                             <AgencyAgents 
-                                key={agency.key}
-                                agency={agency} 
+                                key={agency.id}
+                                agencyName={agency.agencyName}
+                                agents={agency.agents}
                             />
                         );
-                    })
+                    })}
                 </Column>
             </SplitScreen>
         </Page>
     );
 }
 
-export default Agency;
+export default memo(Agency);

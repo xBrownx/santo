@@ -9,8 +9,8 @@ function Enquire() {
     return (
         <Page 
             $bgPrimary
-            paddingInline={32}
-            paddingTop={188}
+            $paddingInline={32}
+            $paddingTop={188}
         >
             <SplitScreen>
                 <PageTitle>

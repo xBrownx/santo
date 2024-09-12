@@ -17,12 +17,12 @@ function EnquireForm() {
     }
 
     return (
-        <Container width={576}>
+        <Container $width={576}>
             <form onSubmit={handleSubmit}>
-                <Column gap={16}>
+                <Column $gap={16}>
                     <Row
                         $justifySpaceBetween
-                        gap={14}
+                        $gap={14}
                     >
                         <Input
                             name={"lastName"}

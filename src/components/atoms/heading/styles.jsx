@@ -7,19 +7,19 @@ export const StyledHeading = styled.h1`
     margin: 0;
     
     ${props => props.$primary && css`
-        color: #4160AE
+        color: ${S.colour.secondary};
     `};
     
-    ${props => props.size && css`
-        ${S.font.size(props.size)}
+    ${props => props.$fontSize && css`
+        font-size: ${S.fontSize(props.$fontSize)}vw;
     `};
     
-    ${props => props.weight && css`
-        font-weight: ${props.weight};
+    ${props => props.$weight && css`
+        font-weight: ${props.$weight};
     `}
     
-    ${props => props.lineHeight && css`
-        ${S.font.lineHeight(props.lineHeight)}
+    ${props => props.$lineHeight && css`
+        line-height: ${S.height(props.$lineHeight)}vh !important;
     `};
     
     

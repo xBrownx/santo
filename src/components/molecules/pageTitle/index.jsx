@@ -6,8 +6,8 @@ function PageTitle(props) {
     return (
         <Container>
             <Heading
-                size={96}
-                lineHeight={100}
+                $fontSize={96}
+                $lineHeight={100}
                 {...props}
             >
                 {props.children}

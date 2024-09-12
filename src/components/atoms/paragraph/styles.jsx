@@ -3,7 +3,7 @@ import {Style as S} from '../../util'
 
 
 export const StyledParagraph = styled.p`
-    ${S.font.size(18)};
+    font-size: ${S.fontSize(18)};
     color: black;
     white-space: pre-wrap;
     padding: 0;
@@ -12,24 +12,36 @@ export const StyledParagraph = styled.p`
         
     `};
     
-    ${props => props.opacity && css`
-        opacity: ${props.opacity};
+    ${props => props.$opacity && css`
+        opacity: ${props.$opacity};
     `};
     
-    ${props => props.size && css`
-        ${S.font.size(props.size)};
+    ${props => props.$fontSize && css`
+        font-size: ${S.fontSize(props.$size)};
     `};
     
-    ${props => props.weight && css`
-        font-weight: ${props.weight};
+    ${props => props.$weight && css`
+        font-weight: ${props.$weight};
     `}
     
-    ${props => props.padding && css`
-        ${S.padding.trbl(props.padding)}
+    ${props => props.$paddingTop && css`
+        padding-top: ${S.height(props.$paddingTop)}
     `}
     
-    ${props => props.lineHeight && css`
-        ${S.font.lineHeight(props.lineHeight)}
+    ${props => props.$paddingRight && css`
+        padding-right: ${S.width(props.$paddingRight)}
+    `}
+    
+    ${props => props.$paddingBottom && css`
+        padding-bottom: ${S.height(props.$paddingBottom)}
+    `}
+    
+    ${props => props.$paddingLeft && css`
+        padding-left: ${S.width(props.$paddingLeft)}
+    `}
+    
+    ${props => props.$lineHeight && css`
+        line-height: ${S.height(props.$lineHeight)}
     `};
 
 `

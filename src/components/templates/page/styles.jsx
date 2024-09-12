@@ -13,12 +13,12 @@ export const StyledPage = styled.section`
         min-height: 100vh;
     `};
     
-    ${props => props.minHeight && css`
-        ${S.size.minHeight(props.minHeight)};
+    ${props => props.$minHeight && css`
+        min-height: ${S.height(props.$minHeight)};
     `};
     
-    ${props => props.height && css`
-        ${S.size.height(props.height)};
+    ${props => props.$height && css`
+        height: ${S.height(props.$height)};
     `};
     
     ${props => props.$bgPrimary && css`
@@ -53,16 +53,30 @@ export const StyledPage = styled.section`
         align-items: end;
     `};
     
-    ${props => props.paddingInlineBlock && css`
-        ${S.padding.inlineBlock(props.paddingInlineBlock)};
-    `}
+    ${props => props.$paddingInline && css`
+        padding-inline: ${S.width(props.$paddingInline)};
+    `};
     
-    ${props => props.padding && css`
-        ${S.padding.trbl(props.padding)};
-    `}
-
-    ${props => props.marginInlineBlock && css`
-        ${S.margin.inlineBlock(props.marginInlineBlock)};
-    `}
+    ${props => props.$paddingBlock && css`
+        padding-block: ${S.height(props.$paddingBlock)};
+    `};
+    
+    ${props => props.$paddingTop && css`
+        padding-top: ${S.height(props.$paddingTop)};
+    `};
+    
+    ${props => props.$paddingRight && css`
+        padding-right: ${S.width(props.$paddingRight)};
+    `};
+    
+    ${props => props.$paddingBottom && css`
+        padding-bottom: ${S.height(props.$paddingBottom)};
+    `};
+    
+    ${props => props.$paddingLeft && css`
+        padding-left: ${S.width(props.$paddingLeft)};
+    `};
+    
+    
 
 `

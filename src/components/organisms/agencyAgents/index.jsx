@@ -11,13 +11,12 @@ function AgencyAgents(props) {
                 {agencyName}
             </LinkSubtitle>
             <Row>
-                {agents.map(agent => {
+                {agents.map((agent) => {
                     return (
                         <Agent 
                             key={agent.id}
                             name={agent.name}
                             phone={agent.phone}
-                            photo={agent.photo}
                         />
                     );
                 })}
@@ -26,4 +25,4 @@ function AgencyAgents(props) {
     );
 }
 
-export deafult memo(AgencyAgents);
+export default memo(AgencyAgents);

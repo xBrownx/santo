@@ -2,20 +2,20 @@ import { memo } from 'react';
 import { Page } from '../../templates';
 import img from "../../../assets/Location-Hero.png"
 import { Button, Column, Container, Paragraph, Row } from "../../atoms/index.jsx";
-import { PageHeading } from "../../molecules/index.jsx";
+import { PageTitle } from "../../molecules/index.jsx";
 
 function Location() {
             return (
                 <Page $bgSecondary>
-                    <Row paddingInlineBlock={{ inline: 32 }}>
-                        <Container width={554}>
-                            <Column gap={32}>
-                                <PageHeading>
+                    <Row $paddingInline={32}>
+                        <Container $width={554}>
+                            <Column $gap={32}>
+                                <PageTitle>
                                     LOCATION
-                                </PageHeading>
+                                </PageTitle>
                                 <Paragraph
-                                    size={18}
-                                    lineHeight={26.94}
+                                    $size={18}
+                                    $lineHeight={26.94}
                                 >
                                     Iaculis blandit arcu vestibulum mauris at sapien auctor feugiat non. Pellentesque
                                     nec vitae adipiscing metus in.<br /><br />
@@ -28,7 +28,7 @@ function Location() {
                                 </Button>
                             </Column>
                         </Container>
-                        <Container widthPc={100}>
+                        <Container $widthPc={100}>
                             <img src={img} alt="location" />
                         </Container>
                     </Row>
