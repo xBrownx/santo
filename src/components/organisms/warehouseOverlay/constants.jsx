@@ -9,8 +9,6 @@ export const warehouseConst = {
             secondFloor: "43",
             total: "284",
             link: "",
-            xPos: "",
-            yPos: ""
         },
     ]
 }
