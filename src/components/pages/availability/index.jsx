@@ -7,45 +7,19 @@ import { PageTitle } from "../../molecules/";
 
 function Availability() {
     return (
-        <Page
-            $bgPrimary
-            $paddingTop={80}
-            $paddingLeft={32}
-        >
-
-            <Column>
-                <PageTitle $primary>
+        <Page $bgPrimary>
+            <Column
+                $paddingInline={32}
+                $paddingBlock={64}
+            >
+                <PageTitle
+                    $secondary
+                    $lineHeight={129.31}
+                >
                     {CONST.titleTxt}
                 </PageTitle>
-                <Row $paddingTop={36}>
-                    <Container
-                        $width={322}
-                        $paddingRight={32}
-                    >
-                        <Column
-                            $paddingTop={36}
-                            $gap={32}
-                        >
-                            <Paragraph
-                                $size={18}
-                                $lineHeight={26.94}
-                            >
-                                {CONST.paragraphTxt}
-                            </Paragraph>
 
-                        </Column>
-
-                    </Container>
-                    <Container
-                        $height={810}
-                        $widthPc={100}
-                    >
-                        <img src={img} alt={""} style={{width: "100%", objectFit: "cover"}} />
-                    </Container>
-
-                </Row>
             </Column>
-
         </Page>
 
     );

@@ -1,29 +1,38 @@
 import { memo } from 'react';
 import styled from "styled-components";
 import { overviewConst as CONST } from "./constants.jsx";
-import { Column, Container, Paragraph, SplitScreen} from "../../atoms";
+import { Button, Column, Container, Paragraph, SplitScreen, Subheading } from "../../atoms";
 import { PageTitle } from "../../molecules";
 import { Page } from '../../templates';
 
+
 function Overview() {
     return (
-        <Page 
-            $bgPrimary
-            $paddingBlock={{block: 64}}
-        >
-            <Column>
+        <Page $bgPrimary>
+            <Column
+                $paddingInline={32}
+                $paddingBlock={64}
+                $gap={32}
+            >
+                <PageTitle $secondary>
+                    {CONST.titleTxt}
+                </PageTitle>
                 <SplitScreen>
-                    <Column>
-                        <PageTitle $primary>
-                            {CONST.titleTxt}
-                        </PageTitle>
-                        <Paragraph>
+                    <Column
+                        $width={544}
+                    >
+                        <Paragraph $fontSize={16.5}>
                             {CONST.paragraphTxt}
                         </Paragraph>
                     </Column>
                     <Column>
-
-
+                        <Subheading>
+                            {CONST.subtitleTxt}
+                        </Subheading>
+                        <StyledUl>
+                            <Paragraph>Land Area</Paragraph>
+                        </StyledUl>
+                        <Button $fillParent>{CONST.buttonTxt}</Button>
                     </Column>
                 </SplitScreen>
                 <Container>

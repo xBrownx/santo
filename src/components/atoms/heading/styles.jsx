@@ -5,9 +5,10 @@ import {Style as S} from '../../util'
 export const StyledHeading = styled.h1`
     padding: 0;
     margin: 0;
+    color: white;
     
-    ${props => props.$primary && css`
-        color: ${S.colour.secondary};
+    ${props => props.$secondary && css`
+        color: ${S.colour.secondaryDark};
     `};
     
     ${props => props.$fontSize && css`

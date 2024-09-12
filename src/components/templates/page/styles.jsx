@@ -14,11 +14,11 @@ export const StyledPage = styled.section`
     `};
     
     ${props => props.$minHeight && css`
-        min-height: ${S.height(props.$minHeight)};
+        min-height: ${S.height(props.$minHeight)}vh;
     `};
     
     ${props => props.$height && css`
-        height: ${S.height(props.$height)};
+        height: ${S.height(props.$height)}vh;
     `};
     
     ${props => props.$bgPrimary && css`
@@ -54,27 +54,27 @@ export const StyledPage = styled.section`
     `};
     
     ${props => props.$paddingInline && css`
-        padding-inline: ${S.width(props.$paddingInline)};
+        padding-inline: ${S.width(props.$paddingInline)}vw;
     `};
     
     ${props => props.$paddingBlock && css`
-        padding-block: ${S.height(props.$paddingBlock)};
+        padding-block: ${S.height(props.$paddingBlock)}vh;
     `};
     
     ${props => props.$paddingTop && css`
-        padding-top: ${S.height(props.$paddingTop)};
+        padding-top: ${S.height(props.$paddingTop)}vh;
     `};
     
     ${props => props.$paddingRight && css`
-        padding-right: ${S.width(props.$paddingRight)};
+        padding-right: ${S.width(props.$paddingRight)}vw;
     `};
     
     ${props => props.$paddingBottom && css`
-        padding-bottom: ${S.height(props.$paddingBottom)};
+        padding-bottom: ${S.height(props.$paddingBottom)}vh;
     `};
     
     ${props => props.$paddingLeft && css`
-        padding-left: ${S.width(props.$paddingLeft)};
+        padding-left: ${S.width(props.$paddingLeft)}vw;
     `};
     
     

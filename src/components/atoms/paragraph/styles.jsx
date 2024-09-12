@@ -8,8 +8,14 @@ export const StyledParagraph = styled.p`
     white-space: pre-wrap;
     padding: 0;
     margin: 0;
+    
     ${props => props.$secondary && css`
-        
+        color: white;
+    `};
+    
+    ${props => props.$subheading && css`
+        font-weight: 700;
+        text-transform: uppercase;
     `};
     
     ${props => props.$opacity && css`
@@ -17,7 +23,7 @@ export const StyledParagraph = styled.p`
     `};
     
     ${props => props.$fontSize && css`
-        font-size: ${S.fontSize(props.$size)};
+        font-size: ${S.fontSize(props.$fontSize)}vw;
     `};
     
     ${props => props.$weight && css`
@@ -25,23 +31,23 @@ export const StyledParagraph = styled.p`
     `}
     
     ${props => props.$paddingTop && css`
-        padding-top: ${S.height(props.$paddingTop)}
+        padding-top: ${S.height(props.$paddingTop)}vh;
     `}
     
     ${props => props.$paddingRight && css`
-        padding-right: ${S.width(props.$paddingRight)}
+        padding-right: ${S.width(props.$paddingRight)}vw;
     `}
     
     ${props => props.$paddingBottom && css`
-        padding-bottom: ${S.height(props.$paddingBottom)}
+        padding-bottom: ${S.height(props.$paddingBottom)}vh;
     `}
     
     ${props => props.$paddingLeft && css`
-        padding-left: ${S.width(props.$paddingLeft)}
+        padding-left: ${S.width(props.$paddingLeft)}vw;
     `}
     
     ${props => props.$lineHeight && css`
-        line-height: ${S.height(props.$lineHeight)}
+        line-height: ${S.height(props.$lineHeight)}vh;
     `};
 
 `

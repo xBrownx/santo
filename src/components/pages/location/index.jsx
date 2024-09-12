@@ -1,39 +1,32 @@
 import { memo } from 'react';
 import { Page } from '../../templates';
-import img from "../../../assets/Location-Hero.png"
-import { Button, Column, Container, Paragraph, Row } from "../../atoms/index.jsx";
+
+import { Column, Paragraph } from "../../atoms/";
 import { PageTitle } from "../../molecules/index.jsx";
+import { locationConst as CONST } from "./constants.jsx";
 
 function Location() {
-            return (
-                <Page $bgSecondary>
-                    <Row $paddingInline={32}>
-                        <Container $width={554}>
-                            <Column $gap={32}>
-                                <PageTitle>
-                                    LOCATION
-                                </PageTitle>
-                                <Paragraph
-                                    $size={18}
-                                    $lineHeight={26.94}
-                                >
-                                    Iaculis blandit arcu vestibulum mauris at sapien auctor feugiat non. Pellentesque
-                                    nec vitae adipiscing metus in.<br /><br />
-                                    Non mattis sit pulvinar sed lacus commodo. Lorem eros magna faucibus dui leo
-                                    scelerisque
-                                    odio arcu ut. Semper in elementum risus a odio viverra ipsum convallis.
-                                </Paragraph>
-                                <Button $fillParent>
-                                    v Floor Plan
-                                </Button>
-                            </Column>
-                        </Container>
-                        <Container $widthPc={100}>
-                            <img src={img} alt="location" />
-                        </Container>
-                    </Row>
-                </Page>
-            );
-        }
+    return (
+        <Page $bgSecondary>
+                <Column
+                    $paddingInline={32}
+                    $paddingBlock={64}
+
+                >
+                    <PageTitle $lineHeight={129.31}>
+                        LOCATION
+                    </PageTitle>
+                    <Paragraph
+                        $secondary
+                        $subheading
+                        $fontSize={24}
+                        $lineHeight={32.33}
+                    >
+                        {CONST.subtitleTxt}
+                    </Paragraph>
+                </Column>
+        </Page>
+    );
+}
 
 export default memo(Location);
