@@ -5,6 +5,8 @@ import { Column, Paragraph } from "../../atoms/";
 import { PageTitle } from "../../molecules/index.jsx";
 import { locationConst as CONST } from "./constants.jsx";
 
+import img from '../../../assets/Location.png'
+
 function Location() {
     return (
         <Page $bgSecondary>
@@ -26,10 +28,10 @@ function Location() {
                     </Paragraph>
                 </Column>
                 <Column
-
-                    $height={774}
                     style={{ background: "#D9D9D9" }}
-                />
+                >
+                    <img src={img} alt="" />
+                </Column>
             </Column>
         </Page>
     );

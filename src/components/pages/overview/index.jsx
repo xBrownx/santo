@@ -1,15 +1,15 @@
 import { memo } from 'react';
 import styled from "styled-components";
 import { overviewConst as CONST } from "./constants.jsx";
-import { Button, Column, Container, Paragraph, Row, SplitScreen, Subheading } from "../../atoms";
-import { PageTitle, ScrollingCarousel } from "../../molecules";
+import { Button, Column, Paragraph, Row, SplitScreen, Subheading } from "../../atoms";
+import { PageTitle } from "../../molecules";
 import { Page } from '../../templates';
 import KeyHighlights from '../../../assets/keyHighlights.svg'
-import img01 from '../../../assets/car1.png'
-import img02 from '../../../assets/car2.png'
+
 import { SlideCarousel } from "../../molecules/slideCarousel/index.jsx";
+
 function Overview() {
-    const imgCarousel = [img01, img02, img01, img02];
+    const imgCarousel = CONST.assets.imgCarousel
     return (
         <Page $bgPrimary>
             <Column
@@ -22,22 +22,40 @@ function Overview() {
                 </PageTitle>
                 <SplitScreen $paddingBottom={70}>
                     <Column
-                        $width={544}
+                        $width={576}
+                        $gap={16}
                     >
-                        <Paragraph $fontSize={16.5} $opacity={0.5}>
-                            {CONST.paragraphTxt}
+                        <Subheading>
+                            {CONST.subtitleTxt[0]} <br />
+                            {CONST.subtitleTxt[1]}
+                        </Subheading>
+                        <Paragraph $fontSize={20} $opacity={0.5}>
+                            {CONST.paragraphTxt[0]}
                         </Paragraph>
+                        <div>
+                            <Paragraph $fontSize={20} $opacity={0.5}>
+                                {CONST.paragraphTxt[1]}
+                            </Paragraph>
+                            <ul style={{ listStyle: "none", paddingLeft: "20px" }}>
+                                {CONST.paragraphBullets.map((bullet, i) => {
+                                    return (
+                                        <li key={i} style={{ color: "black" }}>
+                                            <Paragraph $fontSize={20} $opacity={0.5}>{bullet}</Paragraph>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
                     </Column>
-                    <Column>
+                    <Column $width={672}>
                         <Row $gap={8}>
                             <KeyHighlights />
                             <Subheading>
-                                {CONST.subtitleTxt}
+                                {CONST.subtitleTxtRight}
                             </Subheading>
                         </Row>
 
                         <StyledUl>
-
                             <StyledLi>
                                 <Row>
                                     <Paragraph $fontSize={20} $weight={600}>
@@ -49,7 +67,7 @@ function Overview() {
                                 </Row>
                             </StyledLi>
                             <StyledLi>
-                                 <Row>
+                                <Row>
                                     <Paragraph $fontSize={20} $weight={600}>
                                         Floor Area: <></>
                                     </Paragraph>
@@ -59,7 +77,7 @@ function Overview() {
                                 </Row>
                             </StyledLi>
                             <StyledLi>
-                                 <Row>
+                                <Row>
                                     <Paragraph $fontSize={20} $weight={600}>
                                         Internal Clearance: <></>
                                     </Paragraph>
@@ -71,7 +89,7 @@ function Overview() {
                             <StyledLi>
                                 <Row>
                                     <Paragraph $fontSize={20} $weight={600}>
-                                       Completion: <></>
+                                        Completion: <></>
                                     </Paragraph>
                                     <Paragraph $fontSize={20} $opacity={0.5}>
                                         Q2 2025
@@ -79,11 +97,16 @@ function Overview() {
                                 </Row>
                             </StyledLi>
                         </StyledUl>
-                        <Button $height={40} $fillParent>{CONST.buttonTxt}</Button>
+                        <Column $paddingTop={32}>
+                            <Button $height={40} $fillParent>{CONST.buttonTxt}</Button>
+                        </Column>
+                        <Column $paddingTop={32}>
+                            <img src={CONST.assets.img} alt={""} />
+                        </Column>
                     </Column>
                 </SplitScreen>
-                <Column  $height={511}>
-                    <SlideCarousel images={imgCarousel}/>
+                <Column $height={511}>
+                    <SlideCarousel images={imgCarousel} />
                 </Column>
             </Column>
         </Page>
