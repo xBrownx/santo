@@ -23,7 +23,7 @@ export const Track = styled.div`
 
     &[data-animate="true"] {
         ${InnerContainer} {
-            animation: slideAnimation 15s linear infinite;
+            animation: slideAnimation 25s linear infinite;
         }
     }
 

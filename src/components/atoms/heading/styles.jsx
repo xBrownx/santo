@@ -6,6 +6,7 @@ export const StyledHeading = styled.h1`
     padding: 0;
     margin: 0;
     color: white;
+    font-family: 'ArchivoNarrow', serif;
     
     ${props => props.$secondary && css`
         color: ${S.colour.secondaryDark};

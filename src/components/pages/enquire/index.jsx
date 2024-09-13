@@ -1,23 +1,31 @@
 import { memo } from 'react';
 import { enquireConst as CONST } from './constants';
-import { SplitScreen } from '../../atoms';
+import { Column, SplitScreen } from '../../atoms';
 import { EnquireForm, PageTitle } from '../../molecules';
 import { Page } from '../../templates';
-
+import Arrow from '../../../assets/Arrow.svg?component'
 
 function Enquire() {
     return (
-        <Page 
-            $bgPrimary
-            $paddingInline={32}
-            $paddingTop={188}
-        >
-            <SplitScreen>
+        <Page $bgSecondary>
+            <SplitScreen
+                $paddingInline={32}
+                $paddingTop={188}
+                $paddingRight={168}
+            >
                 <PageTitle>
                     {CONST.titleTxt}
                 </PageTitle>
                 <EnquireForm />
             </SplitScreen>
+            <Column
+                $paddingTop={66}
+                $paddingBottom={68}
+                $paddingRight={32}
+                $justifyEnd
+            >
+                <Arrow />
+            </Column>
         </Page>
     );
 }

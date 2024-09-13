@@ -8,11 +8,11 @@ import { locationConst as CONST } from "./constants.jsx";
 function Location() {
     return (
         <Page $bgSecondary>
-                <Column
-                    $paddingInline={32}
-                    $paddingBlock={64}
-
-                >
+            <Column
+                $paddingInline={32}
+                $paddingBlock={64}
+            >
+                <Column $paddingBottom={32}>
                     <PageTitle $lineHeight={129.31}>
                         LOCATION
                     </PageTitle>
@@ -25,6 +25,12 @@ function Location() {
                         {CONST.subtitleTxt}
                     </Paragraph>
                 </Column>
+                <Column
+
+                    $height={774}
+                    style={{ background: "#D9D9D9" }}
+                />
+            </Column>
         </Page>
     );
 }

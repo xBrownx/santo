@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { landingConst as CONST } from './constants'
 import { Page } from "../../templates/index.jsx";
-import img from "../../../assets/Landing-Placeholder.png"
+import bg from '../../../assets/bg.png'
 
 
 function Landing() {
@@ -10,7 +10,8 @@ function Landing() {
             $bgPrimary
             $fullScreen
         >
-            <img src={img} alt="Landing Placeholder" />
+            <img src={bg} alt={""} style={{height: '100%', objectFit: 'contain'}} />
+
         </Page>
     );
 }

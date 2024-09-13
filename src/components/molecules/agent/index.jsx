@@ -1,16 +1,21 @@
 import { memo } from 'react';
-import { Container, StyledImg } from './styles';
+import { Container, StyledImg, StyledParagraph } from './styles';
 import { Column, Row } from '../../atoms';
 
+
 function Agent(props) {
-    const { name, phone } = props;
+    const { name, phone, photo } = props;
     return (
-        <Container>
-            <Row>
-                {/*<StyledImg src={photo.src} alt={photo.alt} />*/}
-                <Column>
-                    {name}
-                    {phone}
+        <Container >
+            <Row $gap={8}>
+                <StyledImg src={photo} alt={""} />
+                <Column $centre>
+                    <StyledParagraph>
+                        {name}
+                    </StyledParagraph>
+                    <StyledParagraph>
+                        {phone}
+                    </StyledParagraph>
                 </Column>
             </Row>
         </Container>

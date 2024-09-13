@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Style as S } from '../../util'
 
 export const StyledTextArea = styled.textarea`
-    height: ${S.height(109)};
+    height: ${S.height(109)}vh;
     width: 100%;
     background-color: transparent;
     color: white;
@@ -12,8 +12,10 @@ export const StyledTextArea = styled.textarea`
     
     resize: none;
     
+    font-size: ${S.fontSize(20)}vw;
+    font-family: ArchivoNarrow, serif;
     &::placeholder {
-        color: white;
+        color: rgba(255, 255, 255, 0.5);;
     }
     
 `

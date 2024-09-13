@@ -1,3 +1,7 @@
+import andWil from '../../../assets/Andrew Wilson.png'
+import marOno from '../../../assets/Marco Onorato.png'
+import oliTot from '../../../assets/Oliver Totani.png'
+import jacDys from '../../../assets/Jack Dyson.png'
 export const agencyConst = {
     titleTxt: "AGENCY",
     paragraphTxt: "If you'd like to inspect this property in person, please contact an agent from McGees or RWC for further information or to arrange a private inspection.",
@@ -9,12 +13,14 @@ export const agencyConst = {
                 {
                     id: "andWil",
                     name: "ANDREW WILSON",
-                    number: "+61 450 965 633"
+                    phone: "+61 450 965 633",
+                    photo: andWil
                 },
                 {
                     id: "marOno",
                     name: "MARCO ONORATO",
-                    number: "+61 481 157 645"
+                    phone: "+61 481 157 645",
+                    photo: marOno
                 }
             ]
         },
@@ -25,12 +31,14 @@ export const agencyConst = {
                 {
                     id: "oliTot",
                     name: "OLIVER TOTANI",
-                    number: "+61 412 808 743"
+                    phone: "+61 412 808 743",
+                    photo: oliTot
                 },
                 {
                     id: "jacDys",
                     name: "JACK DYSON",
-                    number: "+61 448 685 593"
+                    phone: "+61 448 685 593",
+                    photo: jacDys
                 }
             ]
         },

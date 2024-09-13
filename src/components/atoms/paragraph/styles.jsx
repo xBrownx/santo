@@ -3,11 +3,12 @@ import {Style as S} from '../../util'
 
 
 export const StyledParagraph = styled.p`
-    font-size: ${S.fontSize(18)};
+    font-size: ${S.fontSize(20)};
     color: black;
     white-space: pre-wrap;
     padding: 0;
     margin: 0;
+    font-family: 'ArchivoNarrow', serif;
     
     ${props => props.$secondary && css`
         color: white;

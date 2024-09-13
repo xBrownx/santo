@@ -7,7 +7,8 @@ export const StyledButton = styled.button`
     justify-content: center;
     align-items: center;
     
-    font-size: ${S.fontSize(18)};
+    font-size: ${S.fontSize(20)}vw;
+    font-family: 'ArchivoNarrow', serif;
     color: ${S.colour.secondary};
     margin: 0;
     padding: 0.5em 1.5em;
@@ -24,16 +25,16 @@ export const StyledButton = styled.button`
     z-index: 1;
     
     ${props => props.$width && css`
-        width: ${S.width(props.width)};
+        width: ${S.width(props.width)}vw;
         padding: 0;
     `};
 
     ${props => props.$height && css`
-        height: ${S.height(props.height)};
+        height: ${S.height(props.$height)}vh;
     `};
 
     ${props => props.$fontSize && css`
-        font-size: ${S.fontSize(props.fontSize)};
+        font-size: ${S.fontSize(props.$fontSize)}vw;
     `};
     
     ${props => props.$secondary && css`
@@ -41,8 +42,14 @@ export const StyledButton = styled.button`
         border-color: white;
     `};
     
+    ${props => props.$variantOne && css`
+        background-color: white;
+        border-color: white;
+        font-size: ${S.fontSize(20)}vw;
+    `};
+    
     ${props => props.$gap && css`
-        gap: ${S.width(props.gap)};
+        gap: ${S.width(props.$gap)}vw;
     `};
     
     ${props => props.$fillParent && css`

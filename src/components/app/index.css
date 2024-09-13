@@ -33,3 +33,13 @@ body {
     background-color: #f9f9f9;
   }
 }
+
+@font-face {
+    font-family: 'ArchivoNarrow';
+    src: local('ArchivoNarrow'), url(../../assets/fonts/ArchivoNarrow-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'ArchivoNarrow-Italic';
+    src: local('ArchivoNarrow-Italic'), url(../../assets/fonts/ArchivoNarrow-Italic-VariableFont_wght.ttf) format('truetype');
+}

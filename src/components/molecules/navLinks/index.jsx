@@ -10,7 +10,7 @@ function NavLinks(props) {
   
     return (
         <>
-          {linkList.map(link () => {
+          {linkList.map(link  => {
               return(
                   <li>
                       <Link 

@@ -64,11 +64,12 @@ function EnquireForm() {
                         />
                     </Row>
                     <Button
+                        $height={59}
                         $fillParent
                         $variantOne
                         type="submit"
                     >
-                        Submit
+                        SUBMIT FORM
                     </Button>
                 </Column>
             </form>

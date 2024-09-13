@@ -1,15 +1,19 @@
 import { memo } from 'react';
-import { Container } from './styles';
-import { Subheading } from '../../atoms';
+import Open from '../../../assets/open_in_new.svg?component'
+import { Row, Subheading } from '../../atoms';
+import { Container } from "./styles.jsx";
 
 function LinkSubtitle(props) {
     return (
-        <Container>
-            <Subheading>
+        <Row $gap={8} $pointer $fitContent>
+            <Subheading $underline>
                 {props.children}
             </Subheading>
-            openIcon
-        </Container>        
+            <Container>
+                <Open />
+            </Container>
+
+        </Row>
     );
 }
 

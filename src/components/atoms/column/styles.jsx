@@ -5,9 +5,19 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+    ${props => props.$relative && css`
+        position: relative;
+    `};
     
     ${props => props.$width && css`
         width: ${S.width(props.$width)}vw;
+    `};
+    
+    ${props => props.$height && css`
+        height: ${S.height(props.$height)}vh;
     `};
     
     ${props => props.$paddingInline && css`
@@ -36,5 +46,13 @@ export const Container = styled.div`
     
     ${props => props.$gap && css`
         gap: ${S.height(props.$gap)}vh;
+    `};
+    
+    ${props => props.$centre && css`
+        justify-content: center;
+    `};
+    
+    ${props => props.$justifyEnd && css`
+        align-items: end;
     `};
 `

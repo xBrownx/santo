@@ -10,19 +10,29 @@ function Agency() {
     return (
         <Page 
             $bgPrimary
-            $paddingTop={128}
+            $paddingBlock={128}
             $paddingInline={32}
         >
             <SplitScreen>
-                <Column>
-                    <PageTitle>
+                <Column
+                    $width={411}
+                    $gap={32}
+                >
+                    <PageTitle
+                        $lineHeight={100}
+                        $secondary
+                    >
                         {CONST.titleTxt}
                     </PageTitle>
-                    <Paragraph>
+                    <Paragraph
+                        $fontSize={20}
+                        $lineHeight={26.94}
+                        $opacity={0.5}
+                    >
                         {CONST.paragraphTxt}
                     </Paragraph>
                 </Column>
-                <Column>
+                <Column $gap={48}>
                     {agencies.map(agency => {
                         return(
                             <AgencyAgents 

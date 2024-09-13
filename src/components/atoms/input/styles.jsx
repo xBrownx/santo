@@ -3,15 +3,16 @@ import { Style as S } from "../../util";
 
 export const StyledInput = styled.input`
     width: 100%;
-    height: ${S.height(51)};
+    height: ${S.height(59)}vh;
     background-color: transparent;
-    color: white;
+    
     box-sizing: border-box;
     border: 1px solid white;
     padding: 0 0 0 20px;
-
+    font-size: ${S.fontSize(20)}vw;
+    font-family: ArchivoNarrow, serif;
     &::placeholder {
-        color: white;
+        color: rgba(255, 255, 255, 0.5);;
     }
 
 `

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import {Style as STYLE } from '../../../util';
+import {Style as STYLE } from '../../util';
 
 export const StyledLink = styled.a`
     all: unset;
     text-transform: uppercase;
-    font-size: ${STYLE.fontSize(20)};
+    font-size: ${STYLE.fontSize(20)}vw;
     color: black;
 
     &:hover {
-        
+        cursor: pointer;
     }
 `

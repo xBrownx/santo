@@ -5,6 +5,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
+    box-sizing: border-box;
     
     ${props => props.$paddingInline && css`
         padding-inline: ${S.width(props.$paddingInline)}vw;

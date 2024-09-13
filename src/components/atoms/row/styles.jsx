@@ -4,6 +4,8 @@ import { Style as S } from '../../util'
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
+    align-items: center;
+    width: 100%;
     
     ${props => props.$paddingInline && css`
         padding-inline: ${S.width(props.$paddingInline)}vw;
@@ -28,4 +30,19 @@ export const Container = styled.div`
     ${props => props.$paddingLeft && css`
         padding-left: ${S.width(props.$paddingLeft)}vw;
     `};
+    
+    ${props => props.$gap && css`
+        gap: ${S.width(props.$gap)}vw;
+    `};
+    
+    ${props => props.$pointer && css`
+        &:hover {
+            cursor: pointer;
+        }
+    `};
+    
+    ${props => props.$fitContent && css`
+        width: fit-content;
+    `};
+    
 `

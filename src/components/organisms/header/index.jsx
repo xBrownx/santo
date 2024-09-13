@@ -1,25 +1,24 @@
 import { memo } from 'react';
 import { header as CONST } from './constants'
-import { Container, StyledLi, StyledUl } from './styles';
-import { StyledHeading } from "../../atoms/heading/styles.jsx";
+import { Container, LeftSubtitle, LeftTitle, StyledLi, StyledUl } from './styles';
+import { Column, Row } from "../../atoms/index.jsx";
+import Logo from "../../../assets/Small Log Dark.svg";
 
 const titleText = CONST.titleTxt;
 const links = CONST.linkTxt;
 
-function Header(props) {
+function Header() {
     return (
         <Container
             $height={80}
-            {...props}
         >
-            <StyledHeading
-                $primary
-                $size={32}
-                $weight={700}
-
-            >
-                {titleText}
-            </StyledHeading>
+            <Row $fillParent $gap={20}>
+                <Logo style={{height: "60px"}}/>
+                <Column>
+                    <LeftTitle>{CONST.left[0]}</LeftTitle>
+                    <LeftSubtitle>{CONST.left[1]}</LeftSubtitle>
+                </Column>
+            </Row>
             <Links />
         </Container>
     );

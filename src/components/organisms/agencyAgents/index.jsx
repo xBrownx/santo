@@ -1,27 +1,27 @@
 import { memo } from 'react';
-import { Container } from './styles';
-import { Row } from '../../atoms';
+import { Column, Row } from '../../atoms';
 import { LinkSubtitle, Agent } from '../../molecules';
 
 function AgencyAgents(props) {
     const { agencyName, agents } = props;
     return (
-        <Container>
+        <Column $gap={32}>
             <LinkSubtitle>
                 {agencyName}
             </LinkSubtitle>
-            <Row>
+            <Row $gap={32}>
                 {agents.map((agent) => {
                     return (
                         <Agent 
                             key={agent.id}
                             name={agent.name}
                             phone={agent.phone}
+                            photo={agent.photo}
                         />
                     );
                 })}
             </Row>
-        </Container>  
+        </Column>
     );
 }
 

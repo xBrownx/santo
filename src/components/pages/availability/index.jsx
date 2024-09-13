@@ -1,16 +1,19 @@
 import { memo } from 'react';
 import { availabilityConst as CONST } from "./constants";
 import { Page } from "../../templates/index.jsx";
-import img from '../../../assets/Availability-Hero.png'
-import { Column, Container, Paragraph, Row } from "../../atoms/index.jsx";
+import { Column } from "../../atoms/index.jsx";
 import { PageTitle } from "../../molecules/";
+import backgroundImg from '../../../assets/Availability 1.png'
+import { Background, Image } from "./styles.jsx";
+import AvailabilityOverlay from "../../organisms/availabilityOverlay/index.jsx";
 
 function Availability() {
     return (
         <Page $bgPrimary>
             <Column
                 $paddingInline={32}
-                $paddingBlock={64}
+                $paddingTop={64}
+                $relative
             >
                 <PageTitle
                     $secondary
@@ -20,6 +23,10 @@ function Availability() {
                 </PageTitle>
 
             </Column>
+            <Background>
+                    <Image src={backgroundImg} alt={""} />
+                    <AvailabilityOverlay />
+                </Background>
         </Page>
 
     );
