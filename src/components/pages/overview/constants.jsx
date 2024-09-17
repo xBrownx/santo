@@ -48,13 +48,5 @@ export const overviewConst = {
     buttonTxt: "FLOOR PLAN",
     assets: {
         img: img,
-        imgCarousel: [
-            car01,
-            car02,
-            car03,
-            car04,
-            car05,
-            car06
-        ]
     }
 }

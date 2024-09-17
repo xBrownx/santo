@@ -16,8 +16,16 @@ export const Container = styled.div`
         width: ${S.width(props.$width)}vw;
     `};
     
+    ${props => props.$widthPerCent && css`
+        width: ${props.$widthPerCent}%;
+    `};
+    
     ${props => props.$height && css`
         height: ${S.height(props.$height)}vh;
+    `};
+    
+    ${props => props.$heightPerCent && css`
+        height: ${props.$heightPerCent}%;
     `};
     
     ${props => props.$paddingInline && css`

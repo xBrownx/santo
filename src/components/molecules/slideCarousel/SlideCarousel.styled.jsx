@@ -1,15 +1,16 @@
-import styled, {css} from "styled-components";
-import {SwiperSlide} from "swiper/react";
+import styled, { css } from "styled-components";
+import { SwiperSlide } from "swiper/react";
+import { Style as S } from '../../util'
 
 export const Container = styled.div`
     max-width: 100%;
     display: flex;
     overflow: hidden;
     box-sizing: border-box;
-    -webkit-touch-callout: none; 
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
-    -moz-user-select: none; 
-    -ms-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 
 
@@ -23,14 +24,20 @@ export const Slide = styled(SwiperSlide)`
     overflow: hidden;
     box-sizing: border-box;
     object-fit: scale-down;
+    
 `
 
 
 export const SwiperImage = styled.img`
-    object-fit: cover;
-    width: 100%;
-    height: 100%
-    ${props => props.$rounded && css`
-        border-radius: 15px !important;
+    ${props => props.$width && css`
+        width: ${S.width(props.$width)}vw;
     `}
+    
+    ${props => props.$height && css`
+        height: ${S.height(props.$height)}vh;
+    `}
+    
+    object-fit: cover;
+    
+   
 `

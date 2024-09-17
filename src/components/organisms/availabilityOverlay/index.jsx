@@ -1,14 +1,16 @@
 import { memo, useState } from 'react';
-import { Container, ModalWrapper, VectorWrapper, Wrapper } from "./styles.jsx";
-import { overlayConst as CONST } from './constants.jsx'
+import { Container, HoverWrapper, Wrapper } from "./styles";
+import { overlayConst as CONST } from './constants'
 
 function AvailabilityOverlay() {
-
     return (
         <Container>
             {CONST.modals.map(modal => {
                 return (
-                    <ModalVector key={modal.warehouse} modal={modal} />
+                    <ModalVector
+                        key={modal.warehouse}
+                        modal={modal}
+                    />
                 );
             })}
         </Container>
@@ -17,27 +19,30 @@ function AvailabilityOverlay() {
 
 const ModalVector = (props) => {
     const modal = props.modal;
-    const [hover, isHover] = useState(false);
+    const Vector = modal.vector.Src;
+    const [hover, setIsHover] = useState(false);
+
     return (
-        <div
-            onMouseEnter={() => isHover(true)}
-            onMouseLeave={() => isHover(false)}
-        >
+        <>
+            <HoverWrapper
+                onMouseEnter={() => setIsHover(true)}
+                onMouseLeave={() => setIsHover(false)}
+                $width={modal.boundary.width}
+                $height={modal.boundary.height}
+                $yPos={modal.yPos}
+                $xPos={modal.xPos}
+            />
             <Wrapper
-                $width={modal.width}
-                $height={modal.height}
+                $width={modal.vector.width}
+                $height={modal.vector.height}
                 $yPos={modal.yPos}
                 $xPos={modal.xPos}
                 $hover={hover}
+                $active={modal.active}
             >
-                <ModalWrapper>
-                    <modal.Modal id={"modal"} />
-                </ModalWrapper>
-
-                <modal.Overlay id={"vector"} />
-
+                <Vector />
             </Wrapper>
-        </div>
+        </>
     );
 }
 

@@ -25,7 +25,7 @@ export const StyledButton = styled.button`
     z-index: 1;
     
     ${props => props.$width && css`
-        width: ${S.width(props.width)}vw;
+        width: ${S.width(props.$width)}vw;
         padding: 0;
     `};
 
@@ -43,9 +43,10 @@ export const StyledButton = styled.button`
     `};
     
     ${props => props.$variantOne && css`
-        background-color: white;
-        border-color: white;
-        font-size: ${S.fontSize(20)}vw;
+        background-color: #2E4683;
+        border-color: #2E4683;
+        color: white;
+        opacity: 1;
     `};
     
     ${props => props.$gap && css`
@@ -64,6 +65,16 @@ export const StyledButton = styled.button`
     &:hover {
         cursor: pointer;
         color: #FFF;
+        
+        ${props => props.$variantOne && css`
+            color: #2E4683;
+            svg {
+                transition: filter 300ms;
+                filter: brightness(0) saturate(100%) invert(27%) sepia(14%) saturate(2601%) hue-rotate(185deg) brightness(91%) contrast(94%);
+            }
+        `};
+        
+        
     }
 
     &::after {
@@ -78,6 +89,10 @@ export const StyledButton = styled.button`
         right: 0;
         top: -100%;
         bottom: 100%;
+        
+        ${props => props.$variantOne && css`
+            background: white;
+        `};
     }
 
     &:hover::after {

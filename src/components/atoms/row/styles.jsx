@@ -45,4 +45,8 @@ export const Container = styled.div`
         width: fit-content;
     `};
     
+    ${props => props.$justifyEnd && css`
+        justify-content: end;
+    `};
+    
 `

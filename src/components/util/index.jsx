@@ -6,6 +6,8 @@ export const Style = {}
 Style.width = CALCS.pxToViewWidth;
 Style.height = CALCS.pxToViewHeight;
 Style.fontSize = CALCS.pxToFontSize;
+Style.customHeight = CALCS.pxToCustomHeight;
+
 
 Style.colour = {
     primary: '#9F472B',

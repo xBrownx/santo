@@ -5,11 +5,10 @@ import { Button, Column, Paragraph, Row, SplitScreen, Subheading } from "../../a
 import { PageTitle } from "../../molecules";
 import { Page } from '../../templates';
 import KeyHighlights from '../../../assets/keyHighlights.svg'
-
-import { SlideCarousel } from "../../molecules/slideCarousel/index.jsx";
+import { OverviewCarousel } from "../../organisms/overviewCarousel/index.jsx";
 
 function Overview() {
-    const imgCarousel = CONST.assets.imgCarousel
+
     return (
         <Page $bgPrimary>
             <Column
@@ -69,7 +68,7 @@ function Overview() {
                             <StyledLi>
                                 <Row>
                                     <Paragraph $fontSize={20} $weight={600}>
-                                        Floor Area: <></>
+                                        Unit Sizes: <></>
                                     </Paragraph>
                                     <Paragraph $fontSize={20} $opacity={0.5}>
                                         243 - 868 m²
@@ -89,7 +88,7 @@ function Overview() {
                             <StyledLi>
                                 <Row>
                                     <Paragraph $fontSize={20} $weight={600}>
-                                        Completion: <></>
+                                        Timing: <></>
                                     </Paragraph>
                                     <Paragraph $fontSize={20} $opacity={0.5}>
                                         Q2 2025
@@ -105,9 +104,7 @@ function Overview() {
                         </Column>
                     </Column>
                 </SplitScreen>
-                <Column $height={511}>
-                    <SlideCarousel images={imgCarousel} />
-                </Column>
+                <OverviewCarousel />
             </Column>
         </Page>
     )

@@ -13,7 +13,7 @@ export const SlideCarousel = memo(
                 <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={32}
-                    slidesPerView={2}
+                    slidesPerView={1.8}
                     navigation
                     pagination={{clickable: true}}
                     style={{
@@ -24,10 +24,10 @@ export const SlideCarousel = memo(
                     {images.map((image, i) => {
                         return (
                             <Styled.Slide
-                                as={SwiperSlide}
                                 key={i}
+                                as={SwiperSlide}
                             >
-                                <SwiperImg image={image} rounded={rounded} />
+                                <SwiperImg image={image} />
                             </Styled.Slide>
 
                         );
@@ -42,9 +42,9 @@ const SwiperImg = memo(
     function SwiperImg({image}) {
         return (
             <Styled.SwiperImage
-                src={image}
-                alt={"no image"}
-            />
+                $width={image.width}
+                $height={image.height}
+                {...image} />
         );
     }
 );

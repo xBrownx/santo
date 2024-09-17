@@ -15,11 +15,11 @@ export const Container = styled.div`
     background: white;
     
     ${props => props.$width && css`
-        width: ${S.width(props.$width)};
+        width: ${S.width(props.$width)}vw;
     `};
     
     ${props => props.$height && css`
-        height: ${S.height(props.$height)};
+        height: ${S.height(props.$height)}vh;
     `};
 `
 
@@ -31,10 +31,21 @@ export const StyledUl = styled.ul`
 `
 
 export const StyledLi = styled.li`
-    color: ${S.colour.secondaryDark};
+    transition: all 100ms ease-in-out;
+    color: #000;
     opacity: 0.8;
     font-size: ${S.fontSize(20)}vw;
+    font-family: 'ArchivoNarrow', serif;
     font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+        font-weight: 600;
+    }
 `
 
 export const LeftTitle = styled.h2`
@@ -44,6 +55,10 @@ export const LeftTitle = styled.h2`
     line-height: ${S.height(32)}vh;
     font-family: 'ArchivoNarrow', serif;
     color: ${S.colour.secondaryDark};
+    
+    &:hover {
+        cursor: pointer;
+    }
 `
 
 export const LeftSubtitle = styled.p`
@@ -53,4 +68,17 @@ export const LeftSubtitle = styled.p`
     line-height: ${S.height(18.86)}vh;
     font-family: 'ArchivoNarrow', serif;
     color: ${S.colour.secondaryDark};
+`
+
+export const InnerButtonWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: ${S.width(8)}vw;
+    justify-content: center;
+    align-items: center;
+    
+    svg {
+        height: ${S.height(20)}vh;
+        width: ${S.height(20)}vh;
+    }
 `
