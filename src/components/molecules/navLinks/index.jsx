@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { StyledUl, StyledLi } from './styles';
 import { Link } from '../../atoms';
 
 function NavLinks(props) {
@@ -9,20 +10,20 @@ function NavLinks(props) {
     }
   
     return (
-        <>
+        <StyledUl>
           {linkList.map(link  => {
               return(
-                  <li>
+                  <StyledLi>
                       <Link 
                           key={link.id} 
                           onClick={() => linkTo(link.ref)}
                       >
                           {link.label}
                       </Link>
-                  </li>
+                  </StyledLi>
               );
           })}
-        </>
+        </StyledUl>
     );
 }
 
