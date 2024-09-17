@@ -5,9 +5,11 @@ import { EnquireForm, PageTitle } from '../../molecules';
 import { Page } from '../../templates';
 import Arrow from '../../../assets/Arrow.svg?component'
 
-function Enquire() {
+function Enquire(props) {
     return (
-        <Page $bgSecondary>
+        <Page
+            $pageRef={props.$pageRef}
+            $bgSecondary>
             <SplitScreen
                 $paddingInline={32}
                 $paddingTop={188}

@@ -7,10 +7,14 @@ import { Page } from '../../templates';
 import KeyHighlights from '../../../assets/keyHighlights.svg'
 import { OverviewCarousel } from "../../organisms/overviewCarousel/index.jsx";
 
-function Overview() {
+function Overview(props) {
 
     return (
-        <Page $bgPrimary>
+        <Page
+            $bgPrimary
+            $pageRef={props.$pageRef}
+            $paddingBlock={64}
+        >
             <Column
                 $paddingInline={32}
                 $paddingBlock={64}

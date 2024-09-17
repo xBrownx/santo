@@ -7,9 +7,13 @@ import { locationConst as CONST } from "./constants.jsx";
 
 import img from '../../../assets/Location.png'
 
-function Location() {
+function Location(props) {
     return (
-        <Page $bgSecondary>
+        <Page
+            $pageRef={props.$pageRef}
+            $bgSecondary
+            $paddingBlock={64}
+        >
             <Column
                 $paddingInline={32}
                 $paddingBlock={64}

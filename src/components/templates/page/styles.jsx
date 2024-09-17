@@ -2,6 +2,7 @@ import styled, {css} from 'styled-components'
 import { Style as S } from '../../util'
 
 export const StyledPage = styled.section`
+    
     position: relative;
     display: flex;
     flex-direction: column;

@@ -13,21 +13,23 @@ import ScrollingText from "../organisms/scrollingText/index.jsx";
 
 
 function App() {
+
     const pageRefs = {
         landing: useRef(),
-        overview: useRef(),
+        about: useRef(),
         location: useRef(),
-        availability: useRef(),
+        site: useRef(),
         agency: useRef(),
         enquire: useRef(),
     }
+
     return (
         <>
             <Header $pageRefs={pageRefs} />
             <Landing $pageRef={pageRefs.landing} />
-            <Overview $pageRef={pageRefs.overview}/>
+            <Overview $pageRef={pageRefs.about}/>
             <Location $pageRef={pageRefs.location}/>
-            <Availability $pageRef={pageRefs.availability}/>
+            <Availability $pageRef={pageRefs.site}/>
             <ScrollingText />
             <Agency $pageRef={pageRefs.agency}/>
             <Enquire $pageRef={pageRefs.enquire}/>

@@ -1,57 +1,81 @@
 import { memo } from 'react';
-import { header as CONST } from './constants'
+import { headerConst as CONST } from './constants'
 import { Container, InnerButtonWrapper, LeftSubtitle, LeftTitle, StyledLi, StyledUl } from './styles';
 import { Button, Column, Row } from "../../atoms";
-import Logo from "../../../assets/Small Log Dark.svg";
-import Email from "../../../assets/Header-Email-Icon.svg"
-const titleText = CONST.titleTxt;
-const links = CONST.linkTxt;
 
-function Header() {
+
+function Header(props) {
+    const Logo = CONST.assets.logo;
+    const titleTxt = CONST.titleTxt;
+    const pageRefs = props.$pageRefs
+
+    const navigateTo = (pageId) => {
+
+        setTimeout(() => {
+            pageRefs[pageId].current.scrollIntoView({
+                behavior: "smooth",
+                block: 'start'
+            })
+        }, 100);
+    }
+
     return (
-        <Container
-            $height={104}
-        >
-            <Row $fillParent $gap={20}>
-                <Logo style={{ height: "60px" }} />
+        <Container $height={104}>
+            <Row
+                $fillParent
+                $gap={20}
+                onClick={() => navigateTo("landing")}
+            >
+                <Logo style={{height: "60px"}} />
                 <Column>
-                    <LeftTitle>{CONST.left[0]}</LeftTitle>
-                    <LeftSubtitle>{CONST.left[1]}</LeftSubtitle>
+                    <LeftTitle>
+                        {titleTxt[0]}
+                    </LeftTitle>
+                    <LeftSubtitle>
+                        {titleTxt[1]}
+                    </LeftSubtitle>
                 </Column>
             </Row>
-            <Links />
-
+            <Links navigateTo={navigateTo} />
         </Container>
     );
 }
 
 const Links = memo(
-    function Links() {
+    function Links(props) {
+        const Email = CONST.assets.email;
+        const links = CONST.navLinks;
+
         return (
             <StyledUl>
                 {
-                    links.map((link, i) => {
-                        return (
-                            <StyledLi key={i}>
-                                {link}
-                            </StyledLi>
-                        );
-                    }
-                )}
-                <StyledLi>
-                <Button
-                    $variantOne
-                    $height={40}
-                    $width={120}
-                    $gap={8}
-                >
-                    <InnerButtonWrapper>
-                        <Email />
-                        ENQUIRE
-                    </InnerButtonWrapper>
+                    links.map((link) => {
+                            return (
+                                link.isButton ?
+                                    <Button
+                                        key={link.id}
+                                        $variantOne
+                                        $height={40}
+                                        $width={120}
+                                        $gap={8}
+                                        onClick={() => props.navigateTo(link.id)}
+                                    >
+                                        <InnerButtonWrapper>
+                                            <Email />
+                                            {link.label}
+                                        </InnerButtonWrapper>
 
-                </Button>
-            </StyledLi>
+                                    </Button>
+
+                                    : <StyledLi
+                                        key={link.id}
+                                        onClick={() => props.navigateTo(link.id)}
+                                    >
+                                        {link.label}
+                                    </StyledLi>
+                            );
+                        }
+                    )}
             </StyledUl>
         );
     }

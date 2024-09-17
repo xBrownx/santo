@@ -6,9 +6,13 @@ import { PageTitle } from "../../molecules/";
 import { Background, Image, LegendSquare } from "./styles.jsx";
 import AvailabilityOverlay from "../../organisms/availabilityOverlay/index.jsx";
 
-function Availability() {
+function Availability(props) {
     return (
-        <Page $bgPrimary>
+        <Page
+            $pageRef={props.$pageRef}
+            $bgPrimary
+            $paddingBlock={64}
+        >
             <Column
                 $paddingInline={32}
                 $paddingTop={64}

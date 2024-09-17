@@ -5,10 +5,11 @@ import { PageTitle } from "../../molecules";
 import { AgencyAgents } from '../../organisms';
 import { Page } from '../../templates';
 
-function Agency() {
+function Agency(props) {
     const agencies = CONST.agencies;
     return (
-        <Page 
+        <Page
+            $pageRef={props.$pageRef}
             $bgPrimary
             $paddingBlock={128}
             $paddingInline={32}

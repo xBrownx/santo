@@ -3,7 +3,7 @@ import { StyledPage } from './styles'
 
 function Page(props) {
     return (
-        <StyledPage ref={props.pageRef} {...props}>
+        <StyledPage ref={props.$pageRef} {...props}>
             {props.children}
         </StyledPage>
     );
