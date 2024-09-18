@@ -1,9 +1,9 @@
 import { memo } from 'react';
 import { Wrapper } from './styles';
-import { Button } from '../../atoms';
+import { Button, Icon } from '../../atoms';
 
 function IconButton(props) {
-    const Icon = props.icon;  
+    const iconSrc = props.icon;  
     const text = props.text;
     return (
         <Button
@@ -12,7 +12,11 @@ function IconButton(props) {
             {...props}
         >
           <Wrapper {...props}>
-              <Icon />
+              <Icon 
+                  src={iconSrc} 
+                  $width={props.$iconWidth}
+                  $height={props.$iconHeight}
+              />
               {text}
           </Wrapper>
         </Button>    
