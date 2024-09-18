@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 function Icon(props) {
-    const IconSrc = props.icon;  
+    const IconSrc = props.src;  
     return(
         <Container {...props}>
             <IconSrc />
