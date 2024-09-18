@@ -7,9 +7,4 @@ export const Wrapper = styled.div`
     gap: ${S.width(8)}vw;
     justify-content: center;
     align-items: center;
-    
-    svg {
-        height: ${S.height(20)}vh;
-        width: ${S.height(20)}vh;
-    }
 `
