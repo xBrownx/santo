@@ -12,3 +12,23 @@ html, body {
   overflow-x: hidden;
 }
 
+.swiper-button-prev, .swiper-button-next {
+  width: 64px !important;
+  height: 64px !important;
+}
+
+.swiper-button-prev {
+  background-image: url("../../assets/Swiper-Btn-Previous.svg") !important;
+}
+
+.swiper-button-next {
+  background-image: url("../../assets/Swiper-Btn-Next.svg") !important;
+  width: 64px;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  content: "";
+  opacity: 0;
+}
+
+

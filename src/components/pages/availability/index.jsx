@@ -11,7 +11,6 @@ function Availability(props) {
         <Page
             $pageRef={props.$pageRef}
             $bgPrimary
-            $paddingBlock={64}
         >
             <Column
                 $paddingInline={32}

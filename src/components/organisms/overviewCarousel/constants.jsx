@@ -10,32 +10,32 @@ export const carouselConst = {
         {
             src: car01,
             alt: "overview-carousel-01",
-            width: 810,
-            height: 447,
+            width: 964,
+            height: 532,
         },
         {
             src: car02,
             alt: "overview-carousel-02",
-            width: 810,
-            height: 447,
+            width: 964,
+            height: 532,
         },
         {
             src: car03,
             alt: "overview-carousel-03",
-            width: 810,
-            height: 447,
+            width: 964,
+            height: 532,
         },
         {
             src: car04,
             alt: "overview-carousel-04",
-            width: 810,
-            height: 447,
+            width: 964,
+            height: 532,
         },
         {
             src: car05,
             alt: "overview-carousel-05",
-            width: 810,
-            height: 447,
+            width: 964,
+            height: 532,
         },
     ]
 }

@@ -32,7 +32,7 @@ export const Wrapper = styled.div`
     mix-blend-mode: hard-light;
 
     ${props => props.$hover && css`
-            z-index: 1;
+        z-index: 1;
     `}
     
 
@@ -53,17 +53,33 @@ export const Wrapper = styled.div`
 `
 
 export const ModalWrapper = styled.div`
+    z-index: 2;
     position: absolute;
     width: 233px;
     height: 218px;
-    transform: translateY(-218px);
+    transform: translateY(${props => S.height(props.$yOffset)}vh);
+    
+    ${props => props.$isUp && css`
+        transform: translateY(-${props =>
+                props.$height - 25}px);
+    `};
+    
+    transition: all 400ms ease-in-out;
+    opacity: 0;
+    ${props => props.$yPos && css`
+        top: ${S.customHeight(props.$yPos, 855)}%;
+    `};
 
-    svg {
-        width: 100%;
-        height: 100%;
-        transition: opacity 200ms;
-        transition-timing-function: linear;
-    }
+    ${props => props.$xPos && css`
+        left: ${S.width(props.$xPos)}%;
+    `};
+
+    ${props => props.$hover && css`
+        opacity: 1;
+    `}
+    
+    
+    
 `
 
 export const HoverWrapper = styled.div`

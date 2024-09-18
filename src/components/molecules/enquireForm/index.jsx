@@ -66,7 +66,7 @@ function EnquireForm() {
                     <Button
                         $height={59}
                         $fillParent
-                        $variantOne
+                        $secondary
                         type="submit"
                     >
                         SUBMIT FORM

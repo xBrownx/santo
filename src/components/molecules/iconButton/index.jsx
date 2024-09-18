@@ -7,11 +7,11 @@ function IconButton(props) {
     const text = props.text;
     return (
         <Button
-            $variantOne
             $height={40}
             $width={120}
+            {...props}
         >
-          <Wrapper>
+          <Wrapper {...props}>
               <Icon />
               {text}
           </Wrapper>

@@ -1,11 +1,14 @@
 import { memo } from 'react';
 import styled from "styled-components";
 import { overviewConst as CONST } from "./constants.jsx";
-import { Button, Column, Paragraph, Row, SplitScreen, Subheading } from "../../atoms";
+import { Button, Column, Image, Paragraph, Row, SplitScreen, Subheading } from "../../atoms";
 import { PageTitle } from "../../molecules";
 import { Page } from '../../templates';
 import KeyHighlights from '../../../assets/keyHighlights.svg'
+import Download from '../../../assets/download-icon.svg'
 import { OverviewCarousel } from "../../organisms/overviewCarousel/index.jsx";
+import { Style as S } from '../../util';
+import IconButton from "../../molecules/iconButton/index.jsx";
 
 function Overview(props) {
 
@@ -13,7 +16,6 @@ function Overview(props) {
         <Page
             $bgPrimary
             $pageRef={props.$pageRef}
-            $paddingBlock={64}
         >
             <Column
                 $paddingInline={32}
@@ -25,86 +27,77 @@ function Overview(props) {
                 </PageTitle>
                 <SplitScreen $paddingBottom={70}>
                     <Column
-                        $width={576}
+                        $width={608}
                         $gap={16}
                     >
                         <Subheading>
-                            {CONST.subtitleTxt[0]} <br />
-                            {CONST.subtitleTxt[1]}
+                            {CONST.subtitleTxt}
                         </Subheading>
                         <Paragraph $fontSize={20} $opacity={0.5}>
                             {CONST.paragraphTxt[0]}
                         </Paragraph>
-                        <div>
+                        <div style={{width: "100%"}}>
                             <Paragraph $fontSize={20} $opacity={0.5}>
                                 {CONST.paragraphTxt[1]}
                             </Paragraph>
-                            <ul style={{ listStyle: "none", paddingLeft: "20px" }}>
+                            <ul style={{listStyle: "none", paddingLeft: "10px", marginBlock: "0"}}>
                                 {CONST.paragraphBullets.map((bullet, i) => {
                                     return (
-                                        <li key={i} style={{ color: "black" }}>
-                                            <Paragraph $fontSize={20} $opacity={0.5}>{bullet}</Paragraph>
+                                        <li key={i} style={{color: "black"}}>
+                                            <Paragraph
+                                                $fontSize={20}
+                                                $opacity={0.5}
+                                                $weight={400}
+                                                $lineHeight={26.94}
+                                            >
+                                                {bullet}
+                                            </Paragraph>
                                         </li>
                                     );
                                 })}
                             </ul>
                         </div>
                     </Column>
-                    <Column $width={672}>
-                        <Row $gap={8}>
-                            <KeyHighlights />
-                            <Subheading>
-                                {CONST.subtitleTxtRight}
-                            </Subheading>
-                        </Row>
+                    <Column $gap={64}>
+                        <Column
+                            $width={704}
+                            $gap={16}
+                        >
+                            <Row $gap={8}>
+                                <KeyHighlights />
+                                <Subheading>
+                                    {CONST.subtitleTxtRight}
+                                </Subheading>
+                            </Row>
 
-                        <StyledUl>
-                            <StyledLi>
-                                <Row>
-                                    <Paragraph $fontSize={20} $weight={600}>
-                                        Land Area: <></>
-                                    </Paragraph>
-                                    <Paragraph $fontSize={20} $opacity={0.5}>
-                                        868 m²
-                                    </Paragraph>
-                                </Row>
-                            </StyledLi>
-                            <StyledLi>
-                                <Row>
-                                    <Paragraph $fontSize={20} $weight={600}>
-                                        Unit Sizes: <></>
-                                    </Paragraph>
-                                    <Paragraph $fontSize={20} $opacity={0.5}>
-                                        243 - 868 m²
-                                    </Paragraph>
-                                </Row>
-                            </StyledLi>
-                            <StyledLi>
-                                <Row>
-                                    <Paragraph $fontSize={20} $weight={600}>
-                                        Internal Clearance: <></>
-                                    </Paragraph>
-                                    <Paragraph $fontSize={20} $opacity={0.5}>
-                                        7.75 - 115 m
-                                    </Paragraph>
-                                </Row>
-                            </StyledLi>
-                            <StyledLi>
-                                <Row>
-                                    <Paragraph $fontSize={20} $weight={600}>
-                                        Timing: <></>
-                                    </Paragraph>
-                                    <Paragraph $fontSize={20} $opacity={0.5}>
-                                        Q2 2025
-                                    </Paragraph>
-                                </Row>
-                            </StyledLi>
-                        </StyledUl>
-                        <Column $paddingTop={32}>
-                            <Button $height={40} $fillParent>{CONST.buttonTxt}</Button>
+                            <StyledUl>
+                                {CONST.details.map((detail) => {
+                                    return (
+                                        <ListItem
+                                            key={detail.label}
+                                            label={detail.label}
+                                            value={detail.value}
+                                        />
+                                    );
+                                })}
+                            </StyledUl>
+                            <IconButton
+                                $height={40}
+                                $fillParent
+                                $primary
+                                icon={Download}
+                                text={CONST.buttonTxt}
+                            />
+
                         </Column>
-                        <Column $paddingTop={32}>
-                            <img src={CONST.assets.img} alt={""} />
+                        <Column $gap={8}>
+                            <Row $gap={8}>
+                                <CONST.assets.locationIcon />
+                                <Subheading>
+                                    {CONST.imgTitle}
+                                </Subheading>
+                            </Row>
+                            <Image {...CONST.assets.img} />
                         </Column>
                     </Column>
                 </SplitScreen>
@@ -118,18 +111,32 @@ function Overview(props) {
 
 export const StyledUl = styled.ul`
     padding: 0;
-    list-style-type: disc;
     -webkit-columns: 2;
     -moz-columns: 2;
     columns: 2;
-    list-style-position: inside;
-    gap: 0 16px;
+    margin: 0;
+    list-style: none;
 `
 
 const StyledLi = styled.li`
     padding: 0;
-    margin: 0;
+    margin: 0 0 ${S.height(8)}vh 0;
     height: fit-content;
 `
+
+const ListItem = (props) => {
+    return (
+        <StyledLi>
+            <Row $gap={8}>
+                <Paragraph $fontSize={20} $weight={600} $lineHeight={26.94}>
+                    {props.label}
+                </Paragraph>
+                <Paragraph $fontSize={20} $weight={500} $opacity={0.5} $lineHeight={26.94}>
+                    {props.value}
+                </Paragraph>
+            </Row>
+        </StyledLi>
+    );
+}
 
 export default memo(Overview);

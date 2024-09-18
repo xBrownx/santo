@@ -7,18 +7,20 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 export const SlideCarousel = memo(
-    function SlideCarousel({images, rounded}) {
+    function SlideCarousel({images}) {
         return (
             <Styled.Container>
                 <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={32}
-                    slidesPerView={1.8}
+                    slidesPerView={1.4}
                     navigation
+                    centeredSlides={true}
+                    loop={true}
                     pagination={{clickable: true}}
                     style={{
                         "--swiper-pagination-color": "#FFF",
-                        "--swiper-navigation-color": "#FFF",
+                        "--swiper-navigation-sides-offset": "16vw"
                     }}
                 >
                     {images.map((image, i) => {
@@ -26,25 +28,20 @@ export const SlideCarousel = memo(
                             <Styled.Slide
                                 key={i}
                                 as={SwiperSlide}
+
                             >
-                                <SwiperImg image={image} />
+                                <Styled.SwiperImage
+                                    src={image.src}
+                                    alt={image.alt}
+                                    height={image.height}
+                                    $width={image.width}
+                                />
                             </Styled.Slide>
 
                         );
                     })}
                 </Swiper>
             </Styled.Container>
-        );
-    }
-);
-
-const SwiperImg = memo(
-    function SwiperImg({image}) {
-        return (
-            <Styled.SwiperImage
-                $width={image.width}
-                $height={image.height}
-                {...image} />
         );
     }
 );

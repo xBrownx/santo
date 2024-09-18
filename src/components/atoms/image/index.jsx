@@ -1,9 +1,11 @@
 import { memo } from 'react';
-import { StyledImage } from './styles';
+import { Container, StyledImage } from './styles';
 
 function Image(props) {
     return (
-        <StyledImage {...props} />
+        <Container $width={props.width} $height={props.height} {...props}>
+            <StyledImage {...props} />
+        </Container>
     )
 }
 

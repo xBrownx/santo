@@ -1,6 +1,7 @@
 import andWil from '../../../assets/Andrew Wilson.png'
 import marOno from '../../../assets/Marco Onorato.png'
 import oliTot from '../../../assets/Oliver Totani.png'
+import harEin from '../../../assets/Harry Einarson.png'
 import jacDys from '../../../assets/Jack Dyson.png'
 export const agencyConst = {
     titleTxt: "AGENCY",
@@ -33,6 +34,12 @@ export const agencyConst = {
                     name: "OLIVER TOTANI",
                     phone: "+61 412 808 743",
                     photo: oliTot
+                },
+                {
+                    id: "harEin",
+                    name: "HARRY EINARSON",
+                    phone: "+61 421 747 442",
+                    photo: harEin
                 },
                 {
                     id: "jacDys",

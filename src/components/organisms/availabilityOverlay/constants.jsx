@@ -1,8 +1,4 @@
 import Warehouse01 from '../../../assets/1.svg';
-import Modal01 from '../../../assets/Modal-01.svg'
-import Modal18 from '../../../assets/Modal-18.svg'
-import Modal23 from '../../../assets/Modal-23.svg'
-import Modal31 from '../../../assets/Modal-31.svg'
 import Warehouse02 from '../../../assets/2.svg';
 import Warehouse03 from '../../../assets/3.svg';
 import Warehouse04 from '../../../assets/4.svg';
@@ -34,114 +30,194 @@ import Warehouse29 from '../../../assets/29.svg';
 import Warehouse30 from '../../../assets/30.svg';
 import Warehouse31 from '../../../assets/31.svg';
 
+import Modal07 from '../../../assets/Warehouse-Modal-07.png';
+import Modal08 from '../../../assets/Warehouse-Modal-08.png';
+import Modal09 from '../../../assets/Warehouse-Modal-09.png';
+import Modal10 from '../../../assets/Warehouse-Modal-10.png';
+import Modal11 from '../../../assets/Warehouse-Modal-11.png';
+import Modal12 from '../../../assets/Warehouse-Modal-12.png';
+import Modal13 from '../../../assets/Warehouse-Modal-13.png';
+import Modal14 from '../../../assets/Warehouse-Modal-14.png';
+import Modal15 from '../../../assets/Warehouse-Modal-15.png';
+import Modal16 from '../../../assets/Warehouse-Modal-16.png';
+import Modal17 from '../../../assets/Warehouse-Modal-17.png';
+import Modal18 from '../../../assets/Warehouse-Modal-18.png';
+
 
 export const overlayConst = {
     modals: [
-        // {
-        //     warehouse: 1,
-        //     copy: {
-        //     label: "",
-        //     groundFloor: "198",
-        //     firstFloor: "43",
-        //     secondFloor: "43",
-        //     total: "284",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse01,
-        //     Modal: Modal01,
-        //     width: 233.5,
-        //     height: 137.5,
-        //     yPos: 440,
-        //     xPos: 132.5,
-        //     boundaryWidth: 220,
-        //     boundaryHeight: 155,
-        // },
-        // {
-        //     warehouse: 2,
-        //     copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse02,
-        //     width: 210.5,
-        //     height: 107.5,
-        //     yPos: 394.5 - 18.5,
-        //     xPos: 163.5,
-        // },
-        // {
-        //     warehouse: 3,
-        //     copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse03,
-        //     width: 206.5,
-        //     height: 120,
-        //     yPos: 351.5 - 17,
-        //     xPos: 191,
-        // },
-        // {
-        //     warehouse: 4,
-        //     copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse04,
-        //     width: 187.5,
-        //     height: 98,
-        //     yPos: 313.5 - 15,
-        //     xPos: 216
-        // },
-        // {
-        //     warehouse: 5,
-        //     copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse05,
-        //     width: 185.5,
-        //     height: 107.6,
-        //     yPos: 278 -14,
-        //     xPos: 239
-        // },
-        // {
-        //     warehouse: 6,
-        //     copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //     link: "",
-        //     Overlay: Warehouse06,
-        //     width: 171.5,
-        //     height: 88.5,
-        //     yPos: 245.5 -12,
-        //     xPos: 259
-        // },
+        {
+            warehouse: 1,
+            active: false,
+            yPos: 440,
+            xPos: 132.5,
+            modal: {
+                img: {},
+                label: "",
+                groundFloor: "198",
+                firstFloor: "43",
+                secondFloor: "43",
+                total: "284",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse01,
+                width: 233.5,
+                height: 137.5,
+            },
+            boundary: {
+                width: 220,
+                height: 155,
+                xOffset: 0,
+                yOffset: 0,
+            },
+        },
+        {
+            warehouse: 2,
+            active: false,
+            yPos: 394.5,
+            xPos: 163.5,
+            modal: {
+                img: {},
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse02,
+                width: 210.5,
+                height: 107.5,
+            },
+            boundary: {
+                width: 210.5,
+                height: 50,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
+        {
+            warehouse: 3,
+            active: false,
+            yPos: 351.5,
+            xPos: 191,
+            modal: {
+                img: {},
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse03,
+                width: 206.5,
+                height: 120,
+            },
+            boundary: {
+                width: 206.5,
+                height: 50,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
+        {
+            warehouse: 4,
+            active: false,
+            yPos: 313.5,
+            xPos: 216,
+            modal: {
+                img: {},
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse04,
+                width: 187.5,
+                height: 98,
+            },
+
+            boundary: {
+                width: 187.5,
+                height: 40,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
+        {
+            warehouse: 5,
+            active: false,
+            yPos: 278,
+            xPos: 239,
+            modal: {
+                img: {},
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse05,
+                width: 185.5,
+                height: 107.6,
+            },
+            boundary: {
+                img: {},
+                width: 185,
+                height: 37,
+                xOffset: 0,
+                yOffset: 0
+            }
+
+        },
+        {
+            warehouse: 6,
+            active: false,
+            yPos: 245.5,
+            xPos: 259,
+            modal: {
+                img: {},
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse06,
+                width: 171.5,
+                height: 88.5,
+            },
+            boundary: {
+                width: 170,
+                height: 35,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
         {
             warehouse: 7,
             active: true,
             yPos: 216.5,
             xPos: 277.5,
             modal: {
-                Modal: Modal31,
+                img: {
+                    src: Modal07,
+                    alt: "warehouse07",
+                    width: 233,
+                    height: 240
+                },
+                isUp: false,
                 label: "",
                 groundFloor: "",
                 firstFloor: "",
@@ -167,7 +243,13 @@ export const overlayConst = {
             yPos: 188.5,
             xPos: 295.5,
             modal: {
-                Modal: Modal01,
+                img: {
+                    src: Modal08,
+                    alt: "warehouse08",
+                    width: 233,
+                    height: 240
+                },
+                isUp: false,
                 label: "",
                 groundFloor: "",
                 firstFloor: "",
@@ -193,7 +275,13 @@ export const overlayConst = {
             yPos: 163,
             xPos: 311.5,
             modal: {
-                Modal: Modal01,
+                img: {
+                    src: Modal09,
+                    alt: "warehouse09",
+                    width: 233,
+                    height: 240
+                },
+                isUp: false,
                 label: "",
                 groundFloor: "",
                 firstFloor: "",
@@ -208,7 +296,7 @@ export const overlayConst = {
             },
             boundary: {
                 width: 155.5,
-                height: 20,
+                height: 30,
                 xOffset: 0,
                 yOffset: 0
             }
@@ -219,7 +307,13 @@ export const overlayConst = {
             yPos: 139.5,
             xPos: 326.5,
             modal: {
-                Modal: Modal01,
+                img: {
+                    src: Modal10,
+                    alt: "warehouse10",
+                    width: 233,
+                    height: 240
+                },
+                isUp: false,
                 label: "",
                 groundFloor: "",
                 firstFloor: "",
@@ -234,7 +328,7 @@ export const overlayConst = {
             },
             boundary: {
                 width: 214.5,
-                height: 20,
+                height: 30,
                 xOffset: 0,
                 yOffset: 0
             }
@@ -245,7 +339,13 @@ export const overlayConst = {
             yPos: 140,
             xPos: 529,
             modal: {
-                Modal: Modal01,
+                img: {
+                    src: Modal11,
+                    alt: "warehouse11",
+                    width: 233,
+                    height: 240
+                },
+                isUp: false,
                 label: "",
                 groundFloor: "",
                 firstFloor: "",
@@ -260,18 +360,24 @@ export const overlayConst = {
             },
             boundary: {
                 width: 172,
-                height: 20,
-                xOffset: 0,
+                height: 110,
+                xOffset: 20,
                 yOffset: 0
             }
         },
         {
             warehouse: 12,
             active: true,
-            yPos: 141,
-            xPos: 700,
+            yPos: 138,
+            xPos: 701,
             modal: {
-                Modal: Modal01,
+                img: {
+                    src: Modal12,
+                    alt: "warehouse12",
+                    width: 233,
+                    height: 240
+                },
+                isUp: false,
                 label: "",
                 groundFloor: "",
                 firstFloor: "",
@@ -286,7 +392,7 @@ export const overlayConst = {
             },
             boundary: {
                 width: 140,
-                height: 20,
+                height: 110,
                 xOffset: 0,
                 yOffset: 0
             }
@@ -297,6 +403,13 @@ export const overlayConst = {
             yPos: 247,
             xPos: 545.5,
             modal: {
+                img: {
+                    src: Modal13,
+                    alt: "warehouse13",
+                    width: 233,
+                    height: 240
+                },
+                isUp: true,
                 label: "",
                 groundFloor: "",
                 firstFloor: "",
@@ -322,6 +435,13 @@ export const overlayConst = {
             yPos: 283,
             xPos: 542,
             modal: {
+                img: {
+                    src: Modal14,
+                    alt: "warehouse14",
+                    width: 233,
+                    height: 240
+                },
+                isUp: true,
                 label: "",
                 groundFloor: "",
                 firstFloor: "",
@@ -347,6 +467,13 @@ export const overlayConst = {
             yPos: 322,
             xPos: 528,
             modal: {
+                img: {
+                    src: Modal15,
+                    alt: "warehouse15",
+                    width: 233,
+                    height: 240
+                },
+                isUp: true,
                 label: "",
                 groundFloor: "",
                 firstFloor: "",
@@ -372,6 +499,13 @@ export const overlayConst = {
             yPos: 364.5,
             xPos: 522.5,
             modal: {
+                img: {
+                    src: Modal16,
+                    alt: "warehouse16",
+                    width: 233,
+                    height: 240
+                },
+                isUp: true,
                 label: "",
                 groundFloor: "",
                 firstFloor: "",
@@ -397,6 +531,13 @@ export const overlayConst = {
             yPos: 412,
             xPos: 507.5,
             modal: {
+                img: {
+                    src: Modal17,
+                    alt: "warehouse17",
+                    width: 233,
+                    height: 240
+                },
+                isUp: true,
                 label: "",
                 groundFloor: "",
                 firstFloor: "",
@@ -423,7 +564,13 @@ export const overlayConst = {
             yPos: 460.5,
             xPos: 501.5,
             modal: {
-                Modal: Modal18,
+                img: {
+                    src: Modal18,
+                    alt: "warehouse18",
+                    width: 233,
+                    height: 240
+                },
+                isUp: true,
                 label: "",
                 groundFloor: "",
                 firstFloor: "",
@@ -443,77 +590,113 @@ export const overlayConst = {
                 yOffset: 0
             }
         },
-        // {
-        //     warehouse: 19,
-        //      copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse19,
-        //     width: ,
-        //     height: ,
-        //     yPos: ,
-        //     xPos:
-        // },
-        // {
-        //     warehouse: 20,
-        //      copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse20,
-        //     width: ,
-        //     height: ,
-        //     yPos: ,
-        //     xPos:
-        // },
-        // {
-        //     warehouse: 21,
-        //      copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse21,
-        //     width: ,
-        //     height: ,
-        //     yPos: ,
-        //     xPos:
-        // },
-        // {
-        //     warehouse: 22,
-        //      copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse22,
-        //     width: ,
-        //     height: ,
-        //     yPos: ,
-        //     xPos:
-        // },
+        {
+            warehouse: 19,
+            active: false,
+            yPos: 247,
+            xPos: 699,
+            modal: {
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse19,
+                width: 153.11,
+                height: 36,
+            },
+            boundary: {
+                width: 153.11,
+                height: 36,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
+        {
+            warehouse: 20,
+            active: false,
+            yPos: 283,
+            xPos: 698,
+            modal: {
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+
+            vector: {
+                Src: Warehouse20,
+                width: 156,
+                height: 49.5,
+            },
+            boundary: {
+                width: 156,
+                height: 49.5,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
+        {
+            warehouse: 21,
+            active: false,
+            yPos: 322,
+            xPos: 696.5,
+            modal: {
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse21,
+                width: 169,
+                height: 42.5,
+            },
+            boundary: {
+                width: 169,
+                height: 42.5,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
+        {
+            warehouse: 22,
+            active: false,
+            yPos: 364.5,
+            xPos: 695,
+            modal: {
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse22,
+                width: 173,
+                height: 55,
+            },
+            boundary: {
+                width: 173,
+                height: 55,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
         {
             warehouse: 23,
             active: false,
             yPos: 412,
             xPos: 692,
             modal: {
-                Modal: Modal23,
                 label: "",
                 groundFloor: "",
                 firstFloor: "",
@@ -533,125 +716,188 @@ export const overlayConst = {
                 yOffset: 0
             }
         },
-        // {
-        //     warehouse: 24,
-        //      copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse24,
-        //     width: ,
-        //     height: ,
-        //     yPos: ,
-        //     xPos:
-        // },
-        // {
-        //     warehouse: 25,
-        //      copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse25,
-        //     width: ,
-        //     height: ,
-        //     yPos: ,
-        //     xPos:
-        // },
-        // {
-        //     warehouse: 26,
-        //      copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse26,
-        //     width: ,
-        //     height: ,
-        //     yPos: ,
-        //     xPos:
-        // },
-        // {
-        //     warehouse: 27,
-        //      copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse27,
-        //     width: ,
-        //     height: ,
-        //     yPos: ,
-        //     xPos:
-        // },
-        // {
-        //     warehouse: 28,
-        //      copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse28,
-        //     width: ,
-        //     height: ,
-        //     yPos: ,
-        //     xPos:
-        // },
-        // {
-        //     warehouse: 29,
-        //      copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse29,
-        //     width: ,
-        //     height: ,
-        //     yPos: ,
-        //     xPos:
-        // },
-        // {
-        //     warehouse: 30,
-        //      copy: {
-        //     label: "",
-        //     groundFloor: "",
-        //     firstFloor: "",
-        //     secondFloor: "",
-        //     total: "",
-        //  },
-        //     link: "",
-        //     Overlay: Warehouse30,
-        //     width: ,
-        //     height: ,
-        //     yPos: ,
-        //     xPos:
-        // },
+        {
+            warehouse: 24,
+            active: false,
+            yPos: 111.5,
+            xPos: 887,
+            modal: {
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse24,
+                width: 220.5,
+                height: 99.5,
+            },
+            boundary: {
+                width: 220.5,
+                height: 50,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
+        {
+            warehouse: 25,
+            active: false,
+            yPos: 159,
+            xPos: 899.5,
+            modal: {
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse25,
+                width: 225.5,
+                height: 78,
+            },
+            boundary: {
+                width: 225.5,
+                height: 30,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
+        {
+            warehouse: 26,
+            active: false,
+            yPos: 184.5,
+            xPos: 902,
+            modal: {
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse26,
+                width: 242.5,
+                height: 101,
+            },
+            boundary: {
+                width: 242.5,
+                height: 30,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
+        {
+            warehouse: 27,
+            active: false,
+            yPos: 212.5,
+            xPos: 955,
+            modal: {
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse27,
+                width: 216,
+                height: 107.5,
+            },
+            boundary: {
+                width: 216,
+                height: 40,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
+        {
+            warehouse: 28,
+            active: false,
+            yPos: 249.5,
+            xPos: 973,
+            modal: {
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse28,
+                width: 227,
+                height: 100.5,
+            },
+            boundary: {
+                width: 227,
+                height: 45,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
+        {
+            warehouse: 29,
+            active: false,
+            yPos: 290.5,
+            xPos: 978.5,
+            modal: {
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse29,
+                width: 255,
+                height: 128.5,
+            },
+            boundary: {
+                width: 255,
+                height: 50,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
+        {
+            warehouse: 30,
+            active: false,
+            yPos: 336.5,
+            xPos: 1001,
+            modal: {
+                label: "",
+                groundFloor: "",
+                firstFloor: "",
+                secondFloor: "",
+                total: "",
+                link: "",
+            },
+            vector: {
+                Src: Warehouse30,
+                width: 274.5,
+                height: 138,
+            },
+            boundary: {
+                width: 274.5,
+                height: 55,
+                xOffset: 0,
+                yOffset: 0
+            }
+        },
+
         {
             warehouse: 31,
             active: false,
             yPos: 389,
             xPos: 1017,
             modal: {
-                Modal: Modal31,
                 label: "",
                 groundFloor: "",
                 firstFloor: "",

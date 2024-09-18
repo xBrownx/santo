@@ -22,22 +22,28 @@ export const Slide = styled(SwiperSlide)`
     align-items: center;
     //max-height: 100vh;
     overflow: hidden;
-    box-sizing: border-box;
     object-fit: scale-down;
     
+    ${props => props.$width && css`
+        width: ${S.width(props.$width)}vw;
+    `}
+
+    ${props => props.$height && css`
+        height: ${S.height(props.$height)}vh;
+    `}
 `
 
 
 export const SwiperImage = styled.img`
-    ${props => props.$width && css`
-        width: ${S.width(props.$width)}vw;
-    `}
-    
-    ${props => props.$height && css`
-        height: ${S.height(props.$height)}vh;
-    `}
-    
+
+    display: flex;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100%;
+    object-position: center;
     object-fit: cover;
+    padding: 0;
+    margin: 0;
     
-   
+
 `

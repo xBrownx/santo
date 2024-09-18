@@ -38,7 +38,8 @@ export const StyledButton = styled.button`
     `};
     
     ${props => props.$secondary && css`
-        color: white;
+        color: #2E4683;
+        background-color: white;
         border-color: white;
     `};
     

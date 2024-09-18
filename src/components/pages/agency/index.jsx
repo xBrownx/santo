@@ -33,7 +33,7 @@ function Agency(props) {
                         {CONST.paragraphTxt}
                     </Paragraph>
                 </Column>
-                <Column $gap={48}>
+                <Column $gap={16}>
                     {agencies.map(agency => {
                         return(
                             <AgencyAgents 

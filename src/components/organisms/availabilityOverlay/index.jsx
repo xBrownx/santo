@@ -1,6 +1,7 @@
 import { memo, useState } from 'react';
-import { Container, HoverWrapper, Wrapper } from "./styles";
+import { Container, HoverWrapper, ModalWrapper, Wrapper } from "./styles";
 import { overlayConst as CONST } from './constants'
+import { Image } from '../../atoms'
 
 function AvailabilityOverlay() {
     return (
@@ -42,7 +43,22 @@ const ModalVector = (props) => {
             >
                 <Vector />
             </Wrapper>
+            <ModalWrapper
+                $yPos={modal.yPos}
+                $xPos={modal.xPos}
+                $height={modal.modal.img !== undefined ? modal.modal.img.height : 0 }
+                $yOffset={modal.boundary.height}
+                $hover={hover}
+                $active={modal.active}
+                $isUp={modal.modal !== undefined ? modal.modal.isUp : false}
+            >
+                {
+                    modal.active &&
+                    modal.modal.img !== undefined
+                        ? <img src={modal.modal.img.src} alt={modal.modal.img.alt} /> : <></> }
+            </ModalWrapper>
         </>
+
     );
 }
 

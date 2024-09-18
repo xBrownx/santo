@@ -12,16 +12,6 @@ function Header(props) {
 
     const { y, x, scrollDirection } = useScroll();
 
-    const navigateTo = (pageId) => {
-
-        setTimeout(() => {
-            pageRefs[pageId].current.scrollIntoView({
-                behavior: "smooth",
-                block: 'start'
-            })
-        }, 100);
-    }
-
     return (
         <Container
             $height={104}
@@ -30,7 +20,7 @@ function Header(props) {
             <Row
                 $fillParent
                 $gap={20}
-                onClick={() => navigateTo("landing")}
+                onClick={() => props.navigateTo("landing")}
             >
                 <Logo style={{height: "60px"}} />
                 <Column>
@@ -42,7 +32,7 @@ function Header(props) {
                     </LeftSubtitle>
                 </Column>
             </Row>
-            <Links navigateTo={navigateTo} />
+            <Links navigateTo={props.navigateTo} />
         </Container>
     );
 }

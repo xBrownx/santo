@@ -23,16 +23,35 @@ function App() {
         enquire: useRef(),
     }
 
+    const navigateTo = (pageId) => {
+
+        setTimeout(() => {
+            pageRefs[pageId].current.scrollIntoView({
+                behavior: "smooth",
+                block: 'start'
+            })
+        }, 100);
+    }
+
     return (
         <>
-            <Header $pageRefs={pageRefs} />
-            <Landing $pageRef={pageRefs.landing} />
+            <Header
+                $pageRefs={pageRefs}
+                navigateTo={navigateTo}
+            />
+            <Landing
+                $pageRef={pageRefs.landing}
+                navigateTo={navigateTo}
+            />
             <Overview $pageRef={pageRefs.about}/>
             <Location $pageRef={pageRefs.location}/>
             <Availability $pageRef={pageRefs.site}/>
             <ScrollingText />
             <Agency $pageRef={pageRefs.agency}/>
-            <Enquire $pageRef={pageRefs.enquire}/>
+            <Enquire
+                $pageRef={pageRefs.enquire}
+                navigateTo={navigateTo}
+            />
             <Footer />
         </>
     )

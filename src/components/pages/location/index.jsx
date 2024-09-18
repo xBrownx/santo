@@ -13,7 +13,6 @@ function Location(props) {
         <Page
             $pageRef={props.$pageRef}
             $bgSecondary
-            $paddingBlock={64}
         >
             <Column
                 $paddingInline={32}

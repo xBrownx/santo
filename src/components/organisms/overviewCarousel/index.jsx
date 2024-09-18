@@ -7,7 +7,7 @@ export const OverviewCarousel = memo(
     function OverviewCarousel() {
         const imgCarousel = CONST.imgCarousel;
         return (
-            <Column $height={511}>
+            <Column $height={532}>
                 <SlideCarousel images={imgCarousel} />
             </Column>
         );

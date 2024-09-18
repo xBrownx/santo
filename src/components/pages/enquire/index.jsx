@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { enquireConst as CONST } from './constants';
-import { Column, SplitScreen } from '../../atoms';
+import { Column, Link, SplitScreen } from '../../atoms';
 import { EnquireForm, PageTitle } from '../../molecules';
 import { Page } from '../../templates';
 import Arrow from '../../../assets/Arrow.svg?component'
@@ -26,7 +26,9 @@ function Enquire(props) {
                 $paddingRight={32}
                 $justifyEnd
             >
-                <Arrow />
+                <Link>
+                    <Arrow onClick={() => props.navigateTo("landing")} />
+                </Link>
             </Column>
         </Page>
     );
