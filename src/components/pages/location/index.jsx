@@ -6,6 +6,7 @@ import { PageTitle } from "../../molecules/index.jsx";
 import { locationConst as CONST } from "./constants.jsx";
 
 import img from '../../../assets/Location.png'
+import Video from "../../atoms/video/index.jsx";
 
 function Location(props) {
     return (
@@ -31,11 +32,7 @@ function Location(props) {
                         {CONST.subtitleTxt}
                     </Paragraph>
                 </Column>
-                <Column
-                    style={{ background: "#D9D9D9" }}
-                >
-                    <img src={img} alt="" />
-                </Column>
+                <Video {...CONST.assets.video} />
             </Column>
         </Page>
     );

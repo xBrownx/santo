@@ -72,7 +72,7 @@ export const HoverWrapper = styled.div`
     height: 50px;
     width: 90%;
     background-color: #747bff;
-    opacity: 0.50;
+    opacity: 0.0;
     
     ${props => props.$width && css`
         width: ${S.width(props.$width)}vw;

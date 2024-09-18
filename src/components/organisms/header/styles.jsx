@@ -21,6 +21,15 @@ export const Container = styled.div`
     ${props => props.$height && css`
         height: ${S.height(props.$height)}vh;
     `};
+    
+    visibility: visible;
+    transition: all 0.5s;
+
+    ${props => props.$hidden && css`
+        visibility: hidden;
+        transition: all 0.5s;
+        transform: translateY(-100%);
+    `};
 `
 
 export const StyledUl = styled.ul`

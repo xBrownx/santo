@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { headerConst as CONST } from './constants'
+import { useScroll } from '../../../hooks/useScroll'
 import { Container, InnerButtonWrapper, LeftSubtitle, LeftTitle, StyledLi, StyledUl } from './styles';
 import { Button, Column, Row } from "../../atoms";
 
@@ -8,6 +9,8 @@ function Header(props) {
     const Logo = CONST.assets.logo;
     const titleTxt = CONST.titleTxt;
     const pageRefs = props.$pageRefs
+
+    const { y, x, scrollDirection } = useScroll();
 
     const navigateTo = (pageId) => {
 
@@ -20,7 +23,10 @@ function Header(props) {
     }
 
     return (
-        <Container $height={104}>
+        <Container
+            $height={104}
+            $hidden={scrollDirection === "up"}
+        >
             <Row
                 $fillParent
                 $gap={20}

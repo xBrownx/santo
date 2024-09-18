@@ -1,10 +1,4 @@
-import img from '../../../assets/Overview-Img.png'
-import car01 from '../../../assets/download.jpeg'
-import car02 from '../../../assets/image1.jpg'
-import car03 from '../../../assets/image2.jpg'
-import car04 from '../../../assets/image4.jpg'
-import car05 from '../../../assets/image5.jpg'
-import car06 from '../../../assets/image6.jpg'
+import img from '../../../assets/Overview-Main.png'
 
 export const overviewConst = {
     titleTxt: 'OVERVIEW',
