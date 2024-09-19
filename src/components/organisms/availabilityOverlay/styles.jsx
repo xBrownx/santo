@@ -54,9 +54,7 @@ export const Wrapper = styled.div`
         ${props => props.$hover && props.$active && css`
             opacity: 1;
         `}
-
     }
-
 `
 
 export const ModalWrapper = styled.div`
@@ -93,6 +91,11 @@ export const ModalWrapper = styled.div`
 `
 
 export const ButtonWrapper = styled.div`
+    position: absolute;
+    background-colour: blue;
+    opacity: 0.5; 
+    width: 50px;
+    height: 30px;
     &:hover {
         cursor: pointer;
     }
