@@ -2,6 +2,7 @@ import { memo, useState } from 'react';
 import { Container, HoverWrapper, ModalWrapper, Wrapper } from "./styles";
 import { overlayConst as CONST } from './constants'
 import { Image } from '../../atoms'
+import downloadPdf from '../../../assets/samplePdf';
 
 function AvailabilityOverlay() {
     return (
@@ -55,7 +56,13 @@ const ModalVector = (props) => {
                 {
                     modal.active &&
                     modal.modal.img !== undefined
-                        ? <img src={modal.modal.img.src} alt={modal.modal.img.alt} /> : <></> }
+                    ? 
+                        <img src={modal.modal.img.src} alt={modal.modal.img.alt} /> 
+                        <ButtonWrapper>
+                            <a href={downloadPdf} download="TestFloorPlan" target='_blank' />
+                        </ButtonWrapper>
+                    : <></> 
+                }
             </ModalWrapper>
         </>
 
