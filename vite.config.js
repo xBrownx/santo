@@ -4,5 +4,6 @@ import svgx from "@svgx/vite-plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/santo/",
   plugins: [react(), svgx()],
 })

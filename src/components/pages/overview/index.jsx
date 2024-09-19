@@ -81,8 +81,11 @@ function Overview(props) {
                                     );
                                 })}
                             </StyledUl>
+
                             <IconButton
                                 $height={40}
+                                $iconWidth={24}
+                                $iconHeight={24}
                                 $fillParent
                                 $primary
                                 icon={Download}
