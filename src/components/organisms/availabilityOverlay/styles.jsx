@@ -10,7 +10,10 @@ export const Container = styled.div`
 `
 
 export const Wrapper = styled.div`
-    z-index: -1;
+    ${props => props.$active && css`
+        z-index: -1;
+    `}
+    
     position: absolute;
     height: fit-content;
     ${props => props.$width && css`
@@ -31,7 +34,7 @@ export const Wrapper = styled.div`
 
     mix-blend-mode: hard-light;
 
-    ${props => props.$hover && css`
+    ${props => props.$hover && props.$active && css`
         z-index: 1;
     `}
     
@@ -40,11 +43,15 @@ export const Wrapper = styled.div`
         z-index: 0;
         width: 100%;
         height: 100%;
-        opacity: 0;
-        transition: opacity 200ms;
-        transition-timing-function: linear;
+        
 
-        ${props => props.$hover && css`
+        ${props => props.$active && css`
+            opacity: 0;
+            transition: opacity 200ms;
+            transition-timing-function: linear;
+        `}
+
+        ${props => props.$hover && props.$active && css`
             opacity: 1;
         `}
 
@@ -53,7 +60,7 @@ export const Wrapper = styled.div`
 `
 
 export const ModalWrapper = styled.div`
-    z-index: 2;
+    z-index: -1;
     position: absolute;
     width: 233px;
     height: 218px;
@@ -76,10 +83,19 @@ export const ModalWrapper = styled.div`
 
     ${props => props.$hover && css`
         opacity: 1;
+        z-index: 2;
     `}
-    
-    
-    
+
+    &:hover {
+        opacity: 1;
+        z-index: 2;
+    }
+`
+
+export const ButtonWrapper = styled.div`
+    &:hover {
+        cursor: pointer;
+    }
 `
 
 export const HoverWrapper = styled.div`
