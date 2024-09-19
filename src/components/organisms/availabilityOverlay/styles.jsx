@@ -58,7 +58,7 @@ export const Wrapper = styled.div`
 `
 
 export const ModalWrapper = styled.div`
-    z-index: -1;
+    
     position: absolute;
     width: 233px;
     height: 218px;
@@ -68,6 +68,12 @@ export const ModalWrapper = styled.div`
         transform: translateY(-${props =>
                 props.$height - 25}px);
     `};
+    z-index: -1;
+
+    &:hover {
+        opacity: 1;
+        z-index: 10001;
+    }
     
     transition: all 400ms ease-in-out;
     opacity: 0;
@@ -81,21 +87,24 @@ export const ModalWrapper = styled.div`
 
     ${props => props.$hover && css`
         opacity: 1;
-        z-index: 2;
+        z-index: 10001;
     `}
-
-    &:hover {
-        opacity: 1;
-        z-index: 2;
-    }
+    
+    
 `
 
 export const ButtonWrapper = styled.div`
     position: absolute;
-    background-colour: blue;
     opacity: 0.5; 
-    width: 50px;
-    height: 30px;
+    width: 201px;
+    height: 40px;
+
+    transform: translateY(-${S.height(49)}vh) translateX(${S.width(12)}vw);
+    ${props => props.$isUp && css`
+        transform: translateY(-${S.height(73)}vh) translateX(${S.width(12)}vw);
+    `};
+    
+    
     &:hover {
         cursor: pointer;
     }

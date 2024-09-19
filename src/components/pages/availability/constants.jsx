@@ -1,4 +1,4 @@
-import backgroundImg from '../../../assets/Availability 1.png'
+import backgroundImg from '../../../assets/availability image.png'
 
 export const availabilityConst = {
     titleTxt: 'AVAILABILITY',

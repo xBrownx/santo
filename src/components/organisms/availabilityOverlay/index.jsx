@@ -1,8 +1,8 @@
 import { memo, useState } from 'react';
-import { Container, HoverWrapper, ModalWrapper, Wrapper } from "./styles";
+import { ButtonWrapper, Container, HoverWrapper, ModalWrapper, Wrapper } from "./styles";
 import { overlayConst as CONST } from './constants'
 import { Image } from '../../atoms'
-import downloadPdf from '../../../assets/samplePdf';
+// import downloadPdf from '../../../assets/samplePdf';
 
 function AvailabilityOverlay() {
     return (
@@ -26,7 +26,9 @@ const ModalVector = (props) => {
 
     return (
         <>
-            <HoverWrapper
+            {modal.active &&
+            <>
+                <HoverWrapper
                 onMouseEnter={() => setIsHover(true)}
                 onMouseLeave={() => setIsHover(false)}
                 $width={modal.boundary.width}
@@ -56,14 +58,30 @@ const ModalVector = (props) => {
                 {
                     modal.active &&
                     modal.modal.img !== undefined
-                    ? 
-                        <img src={modal.modal.img.src} alt={modal.modal.img.alt} /> 
-                        <ButtonWrapper>
-                            <a href={downloadPdf} download="TestFloorPlan" target='_blank' />
+                    ? <>
+                        <img
+                            src={modal.modal.img.src}
+                            alt={modal.modal.img.alt}
+                            onMouseEnter={() => setIsHover(true)}
+                            onMouseLeave={() => setIsHover(false)}
+                        />
+                        <ButtonWrapper
+                            $isUp={modal.modal !== undefined ? modal.modal.isUp : false}
+                            onMouseEnter={() => setIsHover(true)}
+                        >
+                            <a
+                                href={"https://gbihr.org/images/docs/test.pdf"}
+                                download="TestFloorPlan"
+                                target='_blank'
+                                style={{display: 'inline-block', width: '100%', height: '100%', background: ''}}
+                            ></a>
                         </ButtonWrapper>
-                    : <></> 
+
+                        </>
+                    : <></>
                 }
             </ModalWrapper>
+                </>}
         </>
 
     );
