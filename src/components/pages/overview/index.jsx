@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import styled from "styled-components";
 import { overviewConst as CONST } from "./constants.jsx";
-import { Button, Column, Image, Paragraph, Row, SplitScreen, Subheading } from "../../atoms";
+import { Column, Image, Paragraph, Row, SplitScreen, Subheading } from "../../atoms";
 import { PageTitle } from "../../molecules";
 import { Page } from '../../templates';
 import KeyHighlights from '../../../assets/keyHighlights.svg'

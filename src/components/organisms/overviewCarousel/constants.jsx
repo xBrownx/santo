@@ -1,8 +1,9 @@
-import car01 from "../../../assets/Overview-Carousel-01.png";
-import car02 from "../../../assets/Overview-Carousel-02.png";
-import car03 from "../../../assets/Overview-Carousel-03.png";
-import car04 from "../../../assets/Overview-Carousel-04.png";
-import car05 from "../../../assets/Overview-Carousel-05.png";
+import car01 from "../../../assets/render1.jpg";
+import car02 from "../../../assets/render2.jpg";
+import car03 from "../../../assets/render3.jpg";
+import car04 from "../../../assets/render4.jpg";
+import car05 from "../../../assets/render5.jpg";
+import car06 from "../../../assets/render6.jpg";
 
 
 export const carouselConst = {
@@ -34,6 +35,12 @@ export const carouselConst = {
         {
             src: car05,
             alt: "overview-carousel-05",
+            width: 964,
+            height: 532,
+        },
+        {
+            src: car06,
+            alt: "overview-carousel-06",
             width: 964,
             height: 532,
         },
