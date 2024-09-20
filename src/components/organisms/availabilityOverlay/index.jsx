@@ -73,7 +73,7 @@ const ModalVector = (props) => {
                                 href={"https://gbihr.org/images/docs/test.pdf"}
                                 download="TestFloorPlan"
                                 target='_blank'
-                                style={{display: 'inline-block', width: '100%', height: '100%', background: ''}}
+                                style={{all: 'unset', display: 'inline-block', width: '100%', height: '100%', background: ''}}
                             ></a>
                         </ButtonWrapper>
 

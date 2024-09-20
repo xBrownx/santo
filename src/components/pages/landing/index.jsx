@@ -1,7 +1,10 @@
 import { memo } from 'react';
 import { landingConst as CONST } from './constants'
 import { Page } from "../../templates/index.jsx";
-import bg from '../../../assets/bg.png'
+import BackgroundVideo from "../../molecules/backgroundVideo/index.jsx";
+import Arrow from "../../../assets/Arrow.svg";
+import { Link } from "../../atoms/index.jsx";
+import { ArrowContainer } from "./styles.jsx";
 
 
 function Landing(props) {
@@ -11,7 +14,12 @@ function Landing(props) {
             $fullScreen
             $pageRef={props.$pageRef}
         >
-            <img src={bg} alt={""} style={{height: '100%', objectFit: 'contain'}} />
+            <BackgroundVideo src={CONST.assets.backgroundVideo} />
+            <ArrowContainer>
+                <Link>
+                    <Arrow onClick={() => props.navigateTo("about")} />
+                </Link>
+            </ArrowContainer>
         </Page>
     );
 }

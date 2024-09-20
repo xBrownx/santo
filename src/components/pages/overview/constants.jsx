@@ -1,5 +1,6 @@
 import img from '../../../assets/Overview-Main-Img.jpg'
 import LocationIcon from '../../../assets/Overview-Location-Icon.svg';
+import pdfDownload from '../../../assets/2023-132_8-18 Santo Pde Port Adelaide_ amendment reduced.pdf'
 export const overviewConst = {
     titleTxt: 'OVERVIEW',
     subtitleTxt: "Warehousing a step above the rest",
@@ -44,6 +45,7 @@ export const overviewConst = {
             width: 704,
             height: 374
         },
-        locationIcon: LocationIcon
+        locationIcon: LocationIcon,
+        pdfDownload: pdfDownload
     }
 }

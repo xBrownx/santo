@@ -81,16 +81,24 @@ function Overview(props) {
                                     );
                                 })}
                             </StyledUl>
+                            <a
+                                href={CONST.assets.pdfDownload}
+                                download="FloorPlan"
+                                target='_blank'
+                                style={{ all: 'unset', display: 'inline-block', width: '100%', height: '100%', background: '' }}
+                            >
+                                <IconButton
+                                    $height={40}
+                                    $iconWidth={24}
+                                    $iconHeight={24}
+                                    $fillParent
+                                    $primary
+                                    icon={Download}
+                                    text={CONST.buttonTxt}
+                                />
+                            </a>
 
-                            <IconButton
-                                $height={40}
-                                $iconWidth={24}
-                                $iconHeight={24}
-                                $fillParent
-                                $primary
-                                icon={Download}
-                                text={CONST.buttonTxt}
-                            />
+
 
                         </Column>
                         <Column $gap={8}>

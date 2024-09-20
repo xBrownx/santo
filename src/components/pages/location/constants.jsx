@@ -1,4 +1,4 @@
-import locationVideo from '../../../assets/Location-Video.mp4'
+import locationVideo from '../../../assets/240919_8-18 Santo Parade_Location.mp4'
 export const locationConst = {
     titleTxt: "LOCATION",
     subtitleTxt: "8-18 Santo Parade, Port Adelaide SA 5015",
