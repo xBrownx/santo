@@ -11,6 +11,7 @@ function MiniMap(props) {
   useEffect(() => {
       mapRef.current = new mapboxgl.Map({
           container: mapContainerRef.current,
+          center: '',
           style: '',
           accessToken: ''
       });
