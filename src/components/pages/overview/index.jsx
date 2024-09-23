@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import styled from "styled-components";
 import { overviewConst as CONST } from "./constants.jsx";
-import { Column, Image, Paragraph, Row, SplitScreen, Subheading } from "../../atoms";
+import { Column, Paragraph, Row, SplitScreen, Subheading } from "../../atoms";
 import { PageTitle } from "../../molecules";
 import { MapView } from '../../organisms';
 import { Page } from '../../templates';
@@ -37,14 +37,18 @@ function Overview(props) {
                         <Paragraph $fontSize={20} $opacity={0.5}>
                             {CONST.paragraphTxt[0]}
                         </Paragraph>
-                        <div style={{width: "100%"}}>
-                            <Paragraph $fontSize={20} $opacity={0.5}>
+                        <Paragraph $fontSize={20} $opacity={0.5}>
                                 {CONST.paragraphTxt[1]}
                             </Paragraph>
-                            <ul style={{listStyle: "none", paddingLeft: "10px", marginBlock: "0"}}>
+                        <div style={{width: "100%"}}>
+
+                            <Paragraph $fontSize={20} $opacity={0.5}>
+                                {CONST.paragraphTxt[2]}
+                            </Paragraph>
+                            <ul style={{listStyle: "none", paddingLeft: "10px", marginBlock: "10px", gap: "10px"}}>
                                 {CONST.paragraphBullets.map((bullet, i) => {
                                     return (
-                                        <li key={i} style={{color: "black"}}>
+                                        <li key={i} style={{color: "black", marginBlock: "10px"}}>
                                             <Paragraph
                                                 $fontSize={20}
                                                 $opacity={0.5}
@@ -108,7 +112,6 @@ function Overview(props) {
                                 </Subheading>
                             </Row>
                             <MapView />
-                            {/*<Image {...CONST.assets.img} /> */}
                         </Column>
                     </Column>
                 </SplitScreen>

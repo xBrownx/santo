@@ -1,4 +1,4 @@
-import { Marker, Map } from 'mapbox-gl';
+import { Marker } from 'mapbox-gl';
 
 export const generateNewMarker = ({ lat, lng, map }) => {
 

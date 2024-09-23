@@ -1,9 +1,9 @@
 import { memo } from 'react'
 import { footerConst as CONST } from './constants';
-import { Container, LeftSubtitle, LeftTitle, Image } from "./styles";
+import { Container, LeftSubtitle, LeftTitle } from "./styles";
 import Logo from '../../../assets/Small Log.svg';
-import replika from '../../../assets/Replika.png'
-import { Column, Row, SplitScreen } from "../../atoms";
+
+import { Column, Row, SplitScreen, Image } from "../../atoms";
 
 function Footer() {
     return (
@@ -20,7 +20,7 @@ function Footer() {
                     </Column>
                 </Row>
                 <Column $justifyEnd>
-                   <Image src={replika} alt={""}/>
+                   <Image {...CONST.assets.logo} />
                 </Column>
             </SplitScreen>
         </Container>

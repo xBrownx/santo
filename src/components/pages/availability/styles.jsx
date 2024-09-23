@@ -9,7 +9,7 @@ export const Background = styled.div`
 `
 
 export const Image = styled.img`
-    width: ${props => S.width(props.width)}vw;
+    width: ${props => S.width(props.$width)}vw;
     height: auto;
     object-fit: cover;
 `
@@ -24,6 +24,6 @@ export const LegendSquare = styled.div`
     `};
     
     ${props => props.$secondary && css`
-        background-color: #B8B8B8CC
+        background-color: #2B2B2BCC;
     `};
 `

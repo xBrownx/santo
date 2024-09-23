@@ -2,7 +2,7 @@ import { memo, useRef } from 'react';
 import { Container } from './styles';
 import { useMap } from '../../../hooks/useMap';
 
-function MapView(props) {
+function MapView() {
     const mapRef = useRef(null);
     useMap(mapRef);
   

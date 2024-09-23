@@ -7,6 +7,7 @@ import { Background, Image, LegendSquare } from "./styles.jsx";
 import AvailabilityOverlay from "../../organisms/availabilityOverlay/index.jsx";
 
 function Availability(props) {
+    const backgroundImage = CONST.assets.backgroundImg;
     return (
         <Page
             $pageRef={props.$pageRef}
@@ -54,8 +55,12 @@ function Availability(props) {
 
 
             </Column>
-            <Background {...CONST.assets.backgroundImg}>
-                <Image {...CONST.assets.backgroundImg} />
+            <Background {...backgroundImage}>
+                <Image
+                    $width={backgroundImage.width}
+                    $height={backgroundImage.height}
+                    {...backgroundImage}
+                />
                 <AvailabilityOverlay />
             </Background>
         </Page>

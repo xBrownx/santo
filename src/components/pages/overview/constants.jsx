@@ -1,12 +1,13 @@
-import img from '../../../assets/Overview-Main-Img.jpg'
 import LocationIcon from '../../../assets/Overview-Location-Icon.svg';
 import pdfDownload from '../../../assets/2023-132_8-18 Santo Pde Port Adelaide_ amendment reduced.pdf'
 export const overviewConst = {
     titleTxt: 'OVERVIEW',
     subtitleTxt: "Warehousing a step above the rest",
     paragraphTxt: [
-        'RWC Adelaide & McGees Property are excited to present 1837 Business Park, a brand new office warehouse development in the absolute heart of the gentrifying Port Adelaide. Spoilt with immediate amenity nearby the recently developed 650* home master planned community - Dock One by Kite Projects.',
-        'Catering for a variety of need and sizes, owner occupiers and investors should be excited by the following investment considerations:'],
+        'RWC Adelaide & McGees Property are excited to present 1837 Business Park, a brand new office warehouse development in the absolute heart of the gentrifying Port Adelaide.',
+        'Spoilt with immediate amenity nearby the recently developed 650* home master planned community - Dock One by Kite Projects.',
+        'Catering for a variety of need and sizes, owner occupiers and investors should be excited by the following investment considerations:'
+    ],
     paragraphBullets: [
         '• Modern built form ranging from 243 m² - 868 m²',
         '• Internal clearances from 7.75m - 11.5m; first of its kind in South Australia, allowing for greater warehousing efficiencies',
@@ -40,11 +41,6 @@ export const overviewConst = {
     buttonTxt: "FLOOR PLAN",
     imgTitle: "8-18 Santo Parade, Port Adelaide, SA 5015",
     assets: {
-        img: {
-            src: img,
-            width: 704,
-            height: 374
-        },
         locationIcon: LocationIcon,
         pdfDownload: pdfDownload
     }

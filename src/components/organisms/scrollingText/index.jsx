@@ -9,7 +9,7 @@ function ScrollingText() {
         <Container>
             <ScrollingCarousel>
                 <HeadingSplit>
-                    8-18 santos parade • 8-18 santos parade • 8-18 santos parade
+                    1837 BUSINESS PARK 1837 BUSINESS PARK
                 </HeadingSplit>
                 <Heading>&nbsp;</Heading>
             </ScrollingCarousel>
