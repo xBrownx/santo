@@ -9,9 +9,10 @@ function MiniMap(props) {
   const mapContainerRef = useRef();
 
   useEffect(() => {
-      mapboxgl.accessToken = '';
       mapRef.current = new mapboxgl.Map({
           container: mapContainerRef.current,
+          style: '',
+          accessToken: ''
       });
 
       return () => {
