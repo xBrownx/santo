@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { Map } from 'mapbox-gl';
-import { initMap } from '../components/utils/initMap';
-import { generateNewMarker } from '../components/utils/generateMarker';
+import { initMap } from '../components/util/initMap';
+import { generateNewMarker } from '../components/util/generateMarker';
 
 export const useMap = (container) => {
 
@@ -9,17 +8,16 @@ export const useMap = (container) => {
 
     useEffect(() => {
         if (container.current) {
-
             mapInitRef.current = initMap(
                 container.current,
-                [-100.31019063199852, 25.66901932031443]
+                [138.5136602, -34.8419509]
             );
 
         }
     }, []);
 
     useEffect(() => {
-        mapInitRef.current && mapInitRef.current.on('load', () => generateNewMarker({ map, ...mapInitRef.current!.getCenter() }))
+        mapInitRef.current && mapInitRef.current.on('load', () => generateNewMarker({lng: 138.5136602, lat: -34.8419509, map: mapInitRef.current} ))
 
         return () => { mapInitRef.current?.off('load', generateNewMarker) }
     }, [])

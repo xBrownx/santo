@@ -22,6 +22,12 @@ export const SlideCarousel = memo(
                         "--swiper-pagination-color": "#FFF",
                         "--swiper-navigation-sides-offset": "16vw"
                     }}
+                    onSwiper={(swiper) => {
+                        swiper.slideNext();
+                        setTimeout(() => {
+                            swiper.slidePrev();
+                        }, 100)
+                    }}
                 >
                     {images.map((image, i) => {
                         return (
@@ -33,7 +39,7 @@ export const SlideCarousel = memo(
                                 <Styled.SwiperImage
                                     src={image.src}
                                     alt={image.alt}
-                                    height={image.height}
+                                    $height={image.height}
                                     $width={image.width}
                                 />
                             </Styled.Slide>

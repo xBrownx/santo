@@ -12,8 +12,6 @@ export const Container = styled.div`
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
-
 `
 
 export const Slide = styled(SwiperSlide)`

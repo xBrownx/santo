@@ -99,8 +99,6 @@ function Overview(props) {
                                 />
                             </a>
 
-
-
                         </Column>
                         <Column $gap={8}>
                             <Row $gap={8}>
@@ -110,7 +108,7 @@ function Overview(props) {
                                 </Subheading>
                             </Row>
                             <MapView />
-                            { */ <Image {...CONST.assets.img} /> */ }
+                            {/*<Image {...CONST.assets.img} /> */}
                         </Column>
                     </Column>
                 </SplitScreen>
