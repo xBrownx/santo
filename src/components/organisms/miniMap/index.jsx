@@ -1,31 +1,16 @@
-import { memo, useRef, useEffect } from 'react';
+import { memo } from 'react';
 import { Container } from './styles';
-import mapboxgl from 'mapbox-gl';
+import { useMap } from '../../../hooks/useMap';
 
-import 'mapbox-gl/dist/mapbox-gl-css';
-
-function MiniMap(props) {
-  const mapRef = useRef();
-  const mapContainerRef = useRef();
-
-  useEffect(() => {
-      mapRef.current = new mapboxgl.Map({
-          container: mapContainerRef.current,
-          center: '',
-          style: '',
-          accessToken: ''
-      });
-
-      return () => {
-        mapRef.current.remove()
-      }
-  }, []);
+function MapView(props) {
+    const mapRef = useRef(null);
+    useMap(mapRef);
   
     return (
         <Container>
-            <div id='map-container' ref={mapContainerRef} />
+            <div ref={mapRef} id='map-container' />
         </Container>
     );
 }
 
-export default memo(MiniMap);
+export default memo(MapView);
