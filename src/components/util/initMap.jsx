@@ -9,6 +9,5 @@ export const initMap = (container, coords) => {
         center: coords,
         zoom: 15,
         accessToken: '',
-        doubleClickZoom: false
     });
 }
