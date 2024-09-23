@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Map } from 'mapbox-gl';
 import { initMap } from '../components/utils/initMap';
-import { generateNewMarker } from '../utils/generateNewMarker';
+import { generateNewMarker } from '../components/utils/generateMarker';
 
 export const useMap = (container) => {
 
