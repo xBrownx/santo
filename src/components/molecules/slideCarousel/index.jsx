@@ -26,7 +26,7 @@ export const SlideCarousel = memo(
                         swiper.slideNext();
                         setTimeout(() => {
                             swiper.slidePrev();
-                        }, 100)
+                        }, 500)
                     }}
                 >
                     {images.map((image, i) => {
