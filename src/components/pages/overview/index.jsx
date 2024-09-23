@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { overviewConst as CONST } from "./constants.jsx";
 import { Column, Image, Paragraph, Row, SplitScreen, Subheading } from "../../atoms";
 import { PageTitle } from "../../molecules";
-impoer { MapView } from '../../organisms';
+import { MapView } from '../../organisms';
 import { Page } from '../../templates';
 import KeyHighlights from '../../../assets/keyHighlights.svg'
 import Download from '../../../assets/download-icon.svg'
