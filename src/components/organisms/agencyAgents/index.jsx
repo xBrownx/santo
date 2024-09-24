@@ -2,11 +2,13 @@ import { memo } from 'react';
 import { Column } from '../../atoms';
 import { LinkSubtitle, Agent } from '../../molecules';
 import { Li, StyledUl } from "./styles.jsx";
+import { useMobile } from "../../../hooks/useMobile.jsx";
 
 function AgencyAgents(props) {
+    const isMobile = useMobile();
     const {agencyName, agents} = props;
     return (
-        <Column $gap={32}>
+        <Column $gap={isMobile ? 16 : 32}>
             <LinkSubtitle>
                 {agencyName}
             </LinkSubtitle>

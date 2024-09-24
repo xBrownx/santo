@@ -6,8 +6,12 @@ import { Container, Wrapper } from "./styles.jsx";
 function LinkSubtitle(props) {
     return (
         <Container>
-            <Row $gap={8} $pointer $fitContent>
-                <Subheading $underline>
+            <Row
+                $gap={8}
+                $pointer
+                $fitContent
+            >
+                <Subheading $underline $large>
                     {props.children}
                 </Subheading>
                 <Wrapper>

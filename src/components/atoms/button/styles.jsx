@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import { Style as S } from "../../util";
+import { Media } from "../../util/Media.jsx";
 
 
 export const StyledButton = styled.button`
@@ -52,6 +53,11 @@ export const StyledButton = styled.button`
     
     ${props => props.$gap && css`
         gap: ${S.width(props.$gap)}vw;
+        
+        ${Media.md`
+            gap: ${props.$gap}px;
+        `};
+        
     `};
     
     ${props => props.$fillParent && css`
@@ -146,6 +152,11 @@ export const StyledButton = styled.button`
     ${props => props.$paddingLeft && css`
         padding-left: ${S.width(props.$paddingLeft)}vw;
     `};
+    
+    ${Media.md`
+        font-size: 16px;
+        font-weight: 400;
+    `}
 
 `
 

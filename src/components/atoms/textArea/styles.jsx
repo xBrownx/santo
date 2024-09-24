@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Style as S } from '../../util'
+import { Media } from "../../util/Media.jsx";
 
 export const StyledTextArea = styled.textarea`
     height: ${S.height(109)}vh;
@@ -17,5 +18,12 @@ export const StyledTextArea = styled.textarea`
     &::placeholder {
         color: rgba(255, 255, 255, 0.5);;
     }
+    
+    ${Media.md`
+        font-size: 16px;
+        line-height: $21.55px;
+        height: 109px;
+        padding: 12px 0 0 14px;
+    `}
     
 `

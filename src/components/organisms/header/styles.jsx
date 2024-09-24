@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Style as S } from '../../util'
+import { Media } from '../../util/Media'
 
 export const Container = styled.div`
     z-index: 10;
@@ -30,6 +31,12 @@ export const Container = styled.div`
         transition: all 0.5s;
         transform: translateY(-100%);
     `};
+    
+    ${Media.md`
+        height: fit-content;
+        padding-top: 5px;
+        padding-bottom: 17px;
+    `}
 `
 
 export const StyledUl = styled.ul`
@@ -37,6 +44,10 @@ export const StyledUl = styled.ul`
     display: flex;
     flex-direction: row;
     gap: ${S.width(32)}vw;
+    
+    ${Media.md`
+        display: none;
+    `}
 `
 
 export const StyledLi = styled.li`
@@ -68,6 +79,14 @@ export const LeftTitle = styled.h2`
     &:hover {
         cursor: pointer;
     }
+
+
+    ${Media.md`
+        font-size: 24px;
+        line-height: 32px;
+    `};
+
+    
 `
 
 export const LeftSubtitle = styled.p`
@@ -77,6 +96,12 @@ export const LeftSubtitle = styled.p`
     line-height: ${S.height(18.86)}vh;
     font-family: 'ArchivoNarrow', serif;
     color: ${S.colour.secondaryDark};
+    
+    ${Media.md`
+        font-size: 12px;
+        line-height: 16.16px;
+    `};
+    
 `
 
 export const InnerButtonWrapper = styled.div`

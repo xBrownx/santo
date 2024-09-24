@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import {Style as S} from '../../util'
+import { Media } from "../../util/Media.jsx";
 
 
 export const StyledParagraph = styled.p`
@@ -51,5 +52,9 @@ export const StyledParagraph = styled.p`
         line-height: ${S.height(props.$lineHeight)}vh;
     `};
 
+    ${Media.md`
+        font-size: 16px;
+    `};
+    
 `
 

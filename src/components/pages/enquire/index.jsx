@@ -4,16 +4,18 @@ import { Column, Link, SplitScreen } from '../../atoms';
 import { EnquireForm, PageTitle } from '../../molecules';
 import { Page } from '../../templates';
 import Arrow from '../../../assets/Arrow.svg?component'
+import { useMobile } from "../../../hooks/useMobile.jsx";
 
 function Enquire(props) {
+    const isMobile = useMobile();
     return (
         <Page
             $pageRef={props.$pageRef}
             $bgSecondary>
             <SplitScreen
-                $paddingInline={32}
-                $paddingTop={188}
-                $paddingRight={168}
+                $paddingInline={isMobile ? 16 : 32}
+                $paddingTop={isMobile ? 32 : 188}
+                $paddingRight={isMobile ? 0 : 168}
             >
                 <PageTitle>
                     {CONST.titleTxt}
@@ -26,7 +28,7 @@ function Enquire(props) {
                 $paddingRight={32}
                 $justifyEnd
             >
-                <Link>
+                <Link $mobileHidden>
                     <Arrow onClick={() => props.navigateTo("landing")} />
                 </Link>
             </Column>

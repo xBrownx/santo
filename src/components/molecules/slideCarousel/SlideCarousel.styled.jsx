@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { SwiperSlide } from "swiper/react";
 import { Style as S } from '../../util'
+import { Media } from "../../util/Media.jsx";
 
 export const Container = styled.div`
     max-width: 100%;
@@ -12,6 +13,10 @@ export const Container = styled.div`
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    
+    ${Media.md`
+        height: 178px;
+    `}
 `
 
 export const Slide = styled(SwiperSlide)`
@@ -29,6 +34,12 @@ export const Slide = styled(SwiperSlide)`
     ${props => props.$height && css`
         height: ${S.height(props.$height)}vh;
     `}
+    
+    ${Media.md`
+        height: 178px;
+        width: 361px;
+    `}
+    
 `
 
 
@@ -43,5 +54,6 @@ export const SwiperImage = styled.img`
     padding: 0;
     margin: 0;
     
-
+    
+    
 `

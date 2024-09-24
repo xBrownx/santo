@@ -8,9 +8,7 @@ import { Button, Column, Row } from "../../atoms";
 function Header(props) {
     const Logo = CONST.assets.logo;
     const titleTxt = CONST.titleTxt;
-    const pageRefs = props.$pageRefs
-
-    const { y, x, scrollDirection } = useScroll();
+    const { scrollDirection } = useScroll();
 
     return (
         <Container

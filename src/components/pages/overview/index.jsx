@@ -10,8 +10,12 @@ import Download from '../../../assets/download-icon.svg'
 import { OverviewCarousel } from "../../organisms/overviewCarousel";
 import { Style as S } from '../../util';
 import IconButton from "../../molecules/iconButton";
+import { Wrapper } from "./styles.jsx";
+import { useMobile } from "../../../hooks/useMobile.jsx";
+import { Media } from "../../util/Media.jsx";
 
 function Overview(props) {
+    const isMobile = useMobile();
 
     return (
         <Page
@@ -19,36 +23,36 @@ function Overview(props) {
             $pageRef={props.$pageRef}
         >
             <Column
-                $paddingInline={32}
+                $paddingInline={isMobile ? 16 : 32}
                 $paddingBlock={64}
                 $gap={32}
             >
                 <PageTitle $secondary>
                     {CONST.titleTxt}
                 </PageTitle>
-                <SplitScreen $paddingBottom={70}>
+                <SplitScreen $paddingBottom={70} $gap={32}>
                     <Column
                         $width={608}
                         $gap={16}
                     >
-                        <Subheading>
+                        <Subheading $mobileHidden>
                             {CONST.subtitleTxt}
                         </Subheading>
                         <Paragraph $fontSize={20} $opacity={0.5}>
                             {CONST.paragraphTxt[0]}
                         </Paragraph>
                         <Paragraph $fontSize={20} $opacity={0.5}>
-                                {CONST.paragraphTxt[1]}
-                            </Paragraph>
-                        <div style={{width: "100%"}}>
+                            {CONST.paragraphTxt[1]}
+                        </Paragraph>
 
+                        <Wrapper $mobileHidden>
                             <Paragraph $fontSize={20} $opacity={0.5}>
                                 {CONST.paragraphTxt[2]}
                             </Paragraph>
-                            <ul style={{listStyle: "none", paddingLeft: "10px", marginBlock: "10px", gap: "10px"}}>
+                            <ul style={{ listStyle: "none", paddingLeft: "10px", marginBlock: "10px", gap: "10px" }} >
                                 {CONST.paragraphBullets.map((bullet, i) => {
                                     return (
-                                        <li key={i} style={{color: "black", marginBlock: "10px"}}>
+                                        <li key={i} style={{ color: "black", marginBlock: "10px" }}>
                                             <Paragraph
                                                 $fontSize={20}
                                                 $opacity={0.5}
@@ -61,7 +65,7 @@ function Overview(props) {
                                     );
                                 })}
                             </ul>
-                        </div>
+                        </Wrapper>
                     </Column>
                     <Column $gap={64}>
                         <Column
@@ -90,7 +94,13 @@ function Overview(props) {
                                 href={CONST.assets.pdfDownload}
                                 download="FloorPlan"
                                 target='_blank'
-                                style={{ all: 'unset', display: 'inline-block', width: '100%', height: '100%', background: '' }}
+                                style={{
+                                    all: 'unset',
+                                    display: 'inline-block',
+                                    width: '100%',
+                                    height: '100%',
+                                    background: ''
+                                }}
                             >
                                 <IconButton
                                     $height={40}
@@ -104,7 +114,7 @@ function Overview(props) {
                             </a>
 
                         </Column>
-                        <Column $gap={8}>
+                        <Column $gap={8} $mobileHidden>
                             <Row $gap={8}>
                                 <CONST.assets.locationIcon />
                                 <Subheading>
@@ -130,6 +140,12 @@ export const StyledUl = styled.ul`
     columns: 2;
     margin: 0;
     list-style: none;
+
+    ${Media.md`
+        -webkit-columns: 1;
+    -moz-columns: 1;
+    columns: 1;
+    `};
 `
 
 const StyledLi = styled.li`

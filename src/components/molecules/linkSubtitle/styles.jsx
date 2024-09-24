@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {Style as S } from '../../util'
+import { Media } from "../../util/Media.jsx";
 
 export const Container = styled.div`
     height: ${S.height(40)}vh;
@@ -15,4 +16,9 @@ export const Wrapper = styled.div`
         width: 100%;
         height: 100%;
     }
+    
+    ${Media.md`
+        width: 24px;
+        height: 24px;
+    `};
 `

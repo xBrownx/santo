@@ -4,18 +4,19 @@ import { Page } from '../../templates';
 import { Column, Paragraph } from "../../atoms/";
 import { PageTitle } from "../../molecules/index.jsx";
 import { locationConst as CONST } from "./constants.jsx";
-
-import img from '../../../assets/Location.png'
 import Video from "../../atoms/video/index.jsx";
+import { useMobile } from "../../../hooks/useMobile.jsx";
 
 function Location(props) {
+    const isMobile = useMobile();
+
     return (
         <Page
             $pageRef={props.$pageRef}
             $bgSecondary
         >
             <Column
-                $paddingInline={32}
+                $paddingInline={isMobile ? 16 : 32}
                 $paddingBlock={64}
             >
                 <Column $paddingBottom={32}>

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Style as S } from "../../util";
+import { Media } from "../../util/Media.jsx";
 
 export const StyledInput = styled.input`
     width: 100%;
@@ -14,5 +15,12 @@ export const StyledInput = styled.input`
     &::placeholder {
         color: rgba(255, 255, 255, 0.5);;
     }
+    
+    ${Media.md`
+        font-size: 16px;
+        line-height: $21.55px;
+        height: 46px;
+        padding: 0 0 0 14px;
+    `}
 
 `

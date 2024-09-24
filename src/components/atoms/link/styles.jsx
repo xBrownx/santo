@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import {Style as STYLE } from '../../util';
+import { Media } from "../../util/Media.jsx";
 
 export const StyledLink = styled.a`
     all: unset;
@@ -10,4 +11,11 @@ export const StyledLink = styled.a`
     &:hover {
         cursor: pointer;
     }
+    
+    ${Media.md`
+        ${props => props.$mobileHidden && css`
+            display: none;
+        `} 
+    `};
+    
 `

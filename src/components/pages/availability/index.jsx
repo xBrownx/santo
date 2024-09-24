@@ -5,8 +5,10 @@ import { Column, Paragraph, Row, SplitScreen } from "../../atoms";
 import { PageTitle } from "../../molecules/";
 import { Background, Image, LegendSquare } from "./styles.jsx";
 import AvailabilityOverlay from "../../organisms/availabilityOverlay/index.jsx";
+import { useMobile } from "../../../hooks/useMobile.jsx";
 
 function Availability(props) {
+    const isMobile = useMobile();
     const backgroundImage = CONST.assets.backgroundImg;
     return (
         <Page
@@ -14,8 +16,9 @@ function Availability(props) {
             $bgPrimary
         >
             <Column
-                $paddingInline={32}
+                $paddingInline={isMobile ? 16 : 32}
                 $paddingTop={64}
+                $paddingBottom={14}
                 $relative
             >
                 <SplitScreen>
@@ -29,10 +32,10 @@ function Availability(props) {
                         $centre
                         $justifyEnd
                         $heightPerCent={100}
+                        $mobileHidden
                     >
                         <div>
                             <Column
-                                $centre
                                 $heightPerCent={100}
                                 $gap={16}
                             >
@@ -52,8 +55,6 @@ function Availability(props) {
                         </div>
                     </Column>
                 </SplitScreen>
-
-
             </Column>
             <Background {...backgroundImage}>
                 <Image
